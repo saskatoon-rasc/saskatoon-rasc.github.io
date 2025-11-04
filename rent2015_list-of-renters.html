@@ -1,0 +1,384 @@
+<html>
+
+<HEAD>
+
+<TITLE> RASC Telescope Rentals </TITLE>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</HEAD>
+
+<body bgcolor="000000">
+
+<script language="JavaScript"><!--
+
+browserName = navigator.appName;
+
+browserVer = parseInt ( navigator.appVersion );
+
+
+
+version = "n2";
+
+if ( browserName == "Netscape" && browserVer >= 3 ) version = "n3";
+
+if ( browserName == "Microsoft Internet Explorer" && browserVer >=4 ) version = "e4";
+
+
+
+if ( version == "n3" || version == "e4" )
+
+{
+
+		home_on = new Image ( 134, 38 );
+		home_on.src = "menuimages/lt_home_on.jpg";
+	    about_on = new Image ( 134, 38 );
+		about_on.src = "menuimages/lt_about_on.jpg";
+		executive_on = new Image ( 134, 38 );
+		executive_on.src = "menuimages/lt_executive_on.jpg";
+		activities_on = new Image ( 134, 38 );
+		activities_on.src = "menuimages/lt_activities_on.jpg";
+		newsletters_on = new Image ( 134, 38 );
+		newsletters_on.src = "menuimages/lt_newsletters_on.jpg";
+		clearsky_on = new Image ( 134, 38 );
+		clearsky_on.src = "menuimages/lt_clearsky_on.jpg";
+		link_on = new Image ( 134, 38 );
+		link_on.src = "menuimages/lt_link_on.jpg";
+		starparty_on = new Image ( 134, 38 );
+		starparty_on.src = "menuimages/lt_starparty_on.jpg";
+		telescopes_on = new Image ( 134, 38 );
+		telescopes_on.src = "menuimages/lt_telescopes_selected.jpg";
+
+		home_off = new Image ( 134, 38 );
+		home_off.src = "menuimages/lt_home_off.jpg";
+		about_off = new Image ( 134, 38 );
+		about_off.src = "menuimages/lt_about_off.jpg";
+		executive_off = new Image ( 134, 38 );
+		executive_off.src = "menuimages/lt_executive_off.jpg";
+		activities_off = new Image ( 134, 38 );
+		activities_off.src = "menuimages/lt_activities_off.jpg";
+		newsletters_off = new Image ( 134, 38 );
+		newsletters_off.src = "menuimages/lt_newsletters_off.jpg";
+		clearsky_off = new Image ( 134, 38 );
+		clearsky_off.src = "menuimages/lt_clearsky_off.jpg";
+		link_off = new Image ( 134, 38 );
+		link_off.src = "menuimages/lt_link_off.jpg";
+		starparty_off = new Image ( 134, 38 );
+		starparty_off.src = "menuimages/lt_starparty_off.jpg";
+		telescopes_off = new Image ( 134, 38 );
+		telescopes_off.src = "menuimages/lt_telescopes_selected.jpg";
+
+
+
+
+
+
+}
+
+
+
+function button_on ( imgName )
+
+{
+
+        if ( version == "n3" || version == "e4" )
+
+        {
+
+                butOn = eval ( imgName + "_on.src" );
+
+                document [imgName].src = butOn;
+
+        }
+
+}
+
+
+
+function button_off ( imgName )
+
+{
+
+        if ( version == "n3" || version == "e4" )
+
+        {
+
+                butOff = eval ( imgName + "_off.src" );
+
+                document [imgName].src = butOff;
+
+        }
+
+}
+
+// --></script>
+
+
+<table border=0 width=100% cellpadding=10 cellspacing=0 height=100%>
+<tr>
+<td valign=top>
+<table border=0 cellpadding=0 cellspacing=0 valign=top>
+<tr><td><a href="index.html"><img src="menuimages/lt_g3_1s2.jpg" border="0" width="134" height="125"></a></td></tr>
+<tr><td><a href="index.html"onmouseout="button_off('home'); return true" onmouseover="button_on('home'); return true"><img src="menuimages/lt_home_off.jpg" border="0" width="134" height="38" name="home"></a></td></tr>
+<tr><td><a href="about_rasc.html"onmouseout="button_off('about'); return true" onmouseover="button_on('about'); return true"><img src="menuimages/lt_about_off.jpg" border="0" width="134" height="38" name="about"></a></td></tr>
+<tr><td><a href="executive.html"onmouseout="button_off('executive'); return true" onmouseover="button_on('executive'); return true"><img src="menuimages/lt_executive_off.jpg" border="0" width="134" height="38" name="executive"></a></td></tr>
+<tr><td><a href="activities.html"onmouseout="button_off('activities'); return true" onmouseover="button_on('activities'); return true"><img src="menuimages/lt_activities_off.jpg" border="0" width="134" height="38" name="activities"></a></td></tr>
+<tr><td><a href="newsletters.html"onmouseout="button_off('newsletters'); return true" onmouseover="button_on('newsletters'); return true"><img src="menuimages/lt_newsletters_off.jpg" border="0" width="134" height="38" name="newsletters"></a></td></tr>
+<tr><td><a href="clearsky.html"onmouseout="button_off('clearsky'); return true" onmouseover="button_on('clearsky') ; return true"><img src="menuimages/lt_clearsky_off.jpg" border="0" width="134" height="38" name="clearsky"></a></td></tr>
+<tr><td><a href="link.html"onmouseout="button_off('link'); return true" onmouseover="button_on('link'); return true"><img src="menuimages/lt_link_off.jpg" border="0" width="134" height="38" name="link"></a></td></tr>
+<tr><td><a href="starparty.html"onmouseout="button_off('starparty'); return true" onmouseover="button_on('starparty'); return true"><img src="menuimages/lt_starparty_off.jpg" border="0" width="134" height="38" name="starparty"></a></td></tr>
+<tr><td><a href="telescopes.html"onmouseout="button_off('telescopes'); return true" onmouseover="button_on('telescopes'); return true"><img src="menuimages/lt_telescopes_selected.jpg" border="0" width="134" height="38" name="telescopes"></a></td>
+</table></td>
+
+<td valign=top bgcolor="FFFFFF"><font face="times">
+<center><img src="images/centre_header.jpg" border=0></center>
+<br><br>
+
+<!-- NEW DATA GOES HERE *NOTE: CHANGE THE MENU GRPAHIC FOR THE CORRESPONDING PAGE GROUP TO THE "selected" VERSION INSTEAD OF "on" AND "off" VERSIONS IN THE JAVASCRIPT ABOVE -->
+
+<center>
+<b>Saskatoon Centre RASC TELESCOPE LOANER PROGRAM</b>
+</center>
+<p>
+
+Since August 1996, Saskatoon Centre has made its telescopes
+available for rent <i>to RASC members</i> on a monthly basis.  
+We have six telescopes
+available for rent:
+<ol>
+<li> 3.1 inch Tasco refractor 
+<li> 4 inch Astroscan compact reflector 
+<li> 6 inch rich field reflector 
+<li> Meade 8 inch skywatcher - telescope 1
+<li> Meade 8 inch skywatcher - telescope 2
+<li> Meade 8 inch skywatcher - telescope 3
+</ol>
+
+<center>
+RULES:
+</center>
+
+The telescopes normally should be picked up and returned to our current telescope curator,  <a href="mailto:errol2@shaw.ca?subject=Telescope Rental">Errol Frazer-Harrison</a>, at the Observatory
+on the University of Saskatchewan campus. Here are the rental rates and rules:
+<ol>
+<li> Cost is $10 per calendar month; $5 for less than half a calendar
+month. <p>
+
+Example 1: pick up on October 12, return November 5, cost = $15.<p>
+
+Example 2: pick up October 10, return October 31, cost = $10.<p>
+
+Example 3: pick up October  12, return November 20, cost = $20.  (The
+best deal is to use for 15 days completely within a 31 day month like
+October, cost = $5.)<p>
+
+<li> To arrange for a telescope rental please e-mail 
+our current telescope curator (see above) with the following information:
+your name, the scope you want or have,
+when you want it or when you want to bring it back.<p>
+
+<li> If you are poor or think that the rental fees are outragous,
+please borrow the telescope anyway and pay what you can.<p>
+
+<li> You can make your payment when you return the `scope, please make
+cheques payable to "Saskatoon Centre RASC".<p>
+
+<li> You may keep the `scope for a minimum of one month.  So if someone
+else wants it before you've had it for a month, I will contact you and
+ask you to return the telescope at the end of your month.  You will not
+be asked to return the telescope if you've had it for less than a
+month.<p>
+
+<li> You can pick up the telescope at any time during the month with
+costs as in item 1 to apply.<p>
+
+<li> You may keep the telescope for a maximum of one year.<p>
+
+</ol>
+Have fun with the `scope and thanks for supporting our Centre!
+
+<hr>
+
+<center>
+<img src="images/eighty.gif"><p>
+</center>
+<a name="4T"><b>History of the 3.1 inch Tasco Refractor</b></a>
+<ul>
+<li>Returned to Gordon Sarty, June 2006. Currently at U of S Observatory.
+<li>Borrowed by: Larry Scott (from Rick Huziak), September 24, 2003.
+<li>Borrowed by: Carl Schlechte (from Rick Huziak), May 16, 2003 - paid $25
+<li>Returned to Gordon Sarty, May 31, 2002.
+<li>Borrowed by: Tenho Tuomi, April 20, 2002 - paid $15
+<li>Returned to Gordon Sarty, approx. June, 2001
+<li>Borrowed by: Brian Husnik, 978-4302, April 10, 2001 - paid $20
+<li>Returned to Gordon Sarty, August 1, 2000.
+<li>Borrowed by: Luela Jensen, May 11, 2000 - paid $25
+<li>Returned to Gordon Sarty, October 6, 1999
+<li>Borrowed by: Merek Wigness, 966-6251, June 9, 1999 - paid $35
+<li>Returned to Gordon Sarty, April 20, 1999
+<li>Borrowed by: Luela Jensen, February 9, 1999 - paid $20
+<li>Returned to Gordon Sarty, October 23, 1998
+<li>Borrowed by: Brian Barnhill, 978-1010, August 11, 1998 - paid $20
+<li>Returned to Gordon Sarty, August 3, 1998
+<li>Borrowed by: Chris Dean, 278-2116: April 14, 1998 - paid $40
+<li>Returned to Gordon Sarty, August 20, 1997
+<li>Borrowed by: Selene Walters, 668-4783, June 3, 1997
+<li>Returned to Gordon Sarty, March 31, 1997
+<li>Borrowed by: Larry Grenkow, 955-0810, February 22, 1997 - paid $15
+<li>Returned to Rystroms, November 18, 1996
+<li>Borrowed by: Paul Ferguson, 653-9039, September 28, 1996
+<li>Borrowed by: Kim Mysyk, 374-2485, September 22, 1996
+<li>Returned to Rystroms, September 22, 1996
+<li>Borrowed by: Ron Schnor, 343-1256, September 7, 1996
+</ul>
+<hr>
+
+<center>
+<img src="images/astroscan.gif"><p>
+</center>
+<a name="4A"><b>History of the 4 inch Astroscan Reflector</b></a>
+<ul>
+<li>Returned to U of S Observatory, March 29, 2014.
+<li>Borrowed by <a href="mailto:djgoodridge@shaw.ca">Jim Goodridge</a>, January 4, 2014 - paid $30.
+<li>Returned to U of S Observatory, November 22, 2012.
+<li>Borrowed by <a href="mailto:strangeg@spsd.sk.ca">Gillian Strange</a>/<a href="mailto:david.werner@usask.ca">David Werner</a>, September 27, 2012 - paid $20.
+<li>Returned to Gordon Sarty, 966-2321, December 6, 2006.
+<li>Borrowed by: <a href="mailto:step18@shaw.ca">Steve Guskjolen</a>, 384-5236, May 8, 2002
+<li>Returned to Gordon Sarty, 966-2321, June 12, 2001
+<li>Borrowed by: Y. Pahatouroglou - paid $20
+<li>Borrowed by: Kirt Headley, 683-0251, August 7, 1998
+<li>Returned to Gordon Sarty, August 3, 1998
+<li>Borrowed by: Helen Dean, 782-3021: April 14, 1998 - paid $40
+<li>Borrowed by: Kirt Headley, 683-0251, January 8, 1998 - paid $10
+<li>Borrowed by: Sandy Ferguson, 931-3184: November 26, 1997
+<li>Returned to Gordon Sarty, 655-2332, November 4, 1997
+<li>Borrowed by: Sandy Ferguson: October, 1997 - paid $10
+<li>Borrowed by: Garry Brett, 384-1807, May 3, 1997
+<li>Borrowed by: Sandy Ferguson, 931-3184, January 20, 1997 - paid $10
+<li>Borrowed by: Walter Essar, 382-5857, November 18, 1996
+<li>Returned to Gordon Sarty, 655-2332, November 12, 1996
+<li>Borrowed by: Les Dickson, 249-1091, October 21, 1996
+<li>Borrowed by: Kurt Headley, 683-0251, September 22, 1996
+<li>Returned to Rystroms, September 22, 1996
+<li>Borrowed by: Ron Schnor, 343-1256, September 6, 1996
+</ul>
+<hr>
+
+<center>
+<img src="images/rft.gif"><p>
+</center>
+<a name="6R"><b>History of the 6 inch Rich Field Telescope</b></a>
+<ul>
+<li>Returned to U of S Observatory, September, 2015 - under repair.
+<li>Borrowed by: <a href="mailto:mdk105@gmail.com">Michael Kelleher</a>, August 12, 2011 = paid $160.
+<li>Returned to Gordon Sarty, 966-2321, September 18, 2006 to U of S Observatory.
+<li>Borrowed by Murray Strankay, Spring, 2006
+<li>Returned to Gordon Sarty, 966-2321, October, 2002
+<li>Borrowed by: Yannis Pahatouroglou, August 30, 2002
+<li>Borrowed by: Kriss Logan, 257-3733, February 4, 2002
+<li>Borrowed by: <a href="mailto:b.barnhill@home.com">Brian Barnhill</a>, 978-1010, July 3, 2001
+<li>Borrowed by: <a href= "mailto:rick.telfer@getthe.net">Rick
+Telfer</a>, 373-0840, July 31, 2000. (needs eyepieces)
+<li>Borrowed by: <a href= "mailto:
+mcintosh.houston@sk.sympatico.ca">Katheleen Houston</a>, 922-8836, June 2, 2000 - paid $20
+<li>Returned to: Gordon Sarty, 655-2332, May 11, 2000
+<li>Borrowed by: Luela Jensen, 239-4316, December 1, 1999 - paid $30
+<li>Returned to: Gordon Sarty, 655-2332, September 30, 1999
+<li>Borrowed by: <a href="mailto:b.barnhill@home.com">Brian
+Barnhill</a>, 978-1010(h), 931-4266(w), September 1999 - paid $10
+<li>Returned to: Gordon Sarty, 655-2332, August 26, 1999
+<li>Borrowed by: Luela Jensen, 239-4316 - paid $10
+<li>Returned to: Gordon Sarty, 655-2332, May 28, 1999
+<li>Borrowed by: <a href="mailto:b.barnhill@home.com">Brian Barnhill</a>, 978-1010 (h), 931-4266 (w), April 20, 1999 - paid $10
+<li>Borrowed by: Helen Dean, 782-3021, August 21, 1998 - paid $20
+<li>Returned to: Gordon Sarty, 655-2332, June 8, 1998
+<li>Borrowed by: Larry Grenkow, 955-0810, April 16, 1998 - paid $15
+<li>Borrowed by: Kirt Headley, 683-0251, March 1998
+<li>Returned to Gordon Sarty, 655-2332, December 18, 1997
+<li>Borrowed by: Brian Barnhill, 978-1010, November 27, 1997 - paid $5
+<li>Returned to Sleaford, November 2, 1997
+<li>Borrowed by: Ron Schnor, 343-1256, September 22, 1996 - paid $130
+</ul>
+<hr>
+
+<center>
+<img src="images/meade_lightbridge.gif"><p>
+</center>
+The skywatcher comes with a straight through finder (6x 50), 25mm & 10mm Plossl eyepieces and a 2 inch eyepiece adapter. Here is a <a href="ScopeList.pdf">list</a> of the parts - please print the list if you rent this telescope.<p> 
+<a name="8MA"><b>History of the 8 inch Meade Star-Watcher 1</b></a>
+<ul>
+<li> Borrowed by <a href="mailto:andrearegier@gmail.com">Andrea Regier</a>, June 28, 2015.
+<li> Returned by Alan Duffy, June 18, 2015, paid $40.
+<li> Borrowed by <a href="mailto:colleen.cameron@usask.ca">Colleen Cameron</a>, July 3, 2014.
+<li> Returned, April 26, 2014.
+<li> Borrowed by <a href="mailto:andrewward123@gmail.com">Andrew Ward</a>, July 11, 2013.
+<li> Returned to U of S Observatory, December 13, 2012.
+<li> Borrowed by <a href=:mailto:amw463@mail.usask.ca">Aubree Worobetz</a>, December 2, 2011.
+<li> Returned to U of S Observatory, November 21, 2011.
+<li> Borrowed by: <a href="mailto:j.vandevorst@phenomenome.com">Jordan Van de Vorst</a>, September 6, 2011, paid $25
+<li> Borrowed by: Rick Huziak for SSSP, August 21 to 29, 2011.
+<li> Returned to U of S Observatory, January 31, 2011.
+<li> Borrowed by: <a href="mailto:abrahamson@sedsystems.ca">Ian Abrahamson</a>, October 31, 2010, paid $50.
+<li> Borrowed by: <a href="mailto:daw980@mail.usask.ca">Dave Williams</a>, September 21, 2010 (Passed to Ian Abrahamson October 31).
+<li> Borrowed by: <a href="mailto:bernicefriesen@shaw.ca">Bernice Friesen</a>, 477-1057, January 28, 2010 (Returned circa March).
+<li> Reserved for: <a href="mailto:bordagea@nb.sympatico.ca">Adrien Bordage</a>, RASC NB Centre for SSSP 2009, August 12-17
+</ul>
+<hr>
+
+<center>
+<img src="images/meade_lightbridge.gif"><p>
+</center>
+The skywatcher comes with a straight through finder (6x 50), 25mm & 10mm Plossl eyepieces and a 2 inch eyepiece adapter. Here is a <a href="ScopeList.pdf">list</a> of the parts - please print the list if you rent this telescope.<p> 
+<a name="8MB"><b>History of the 8 inch Meade Meade Star-Watcher 2</b></a>
+<ul>
+<li> Returned to U of S Observatory - currently being repaired.
+<li> Borrowed by: Jeremiah Olson (loaned by: <a href="mailto:dickandmarion@sasktel.net">Dick Kirk</a>), February 19, 2013 - paid $95.
+<li> Reserved for: <a href="mailto:stan.shadick@usask.ca">Stan Shadick</a>, December 14-17, 2012.
+<li> Returned to U of S Observatory, November 22, 2012.
+<li>Borrowed by <a href="mailto:strangeg@spsd.sk.ca">Gillian Strange</a>/<a href="mailto:david.werner@usask.ca">David Werner</a>, September 27, 2012 - paid $20.
+<li> Borrowed by: <a href="mailto:huziak@sedsystems.ca">Rick Huziak</a>, September 12, 2012.
+<li> Borrowed by: <a href="mailto:huziak@sedsystems.ca">Rick Huziak</a>, July 30, 2012, for SSSP, returned August 22, 2012.
+<li> Borrowed by: <a href="mailto:stulutions@gmail.com">Stuart Schindel</a>, May 23, 2012 - paid $20.
+<li> Borrowed by: <a href="mailto:djgoodridge@shaw.ca">Jim Goodridge</a>, December 17, 2011. Returned April 30, 2012, paid $50.
+<li> Borrowed by: Rick Huziak for SSSP, August 21 to 29, 2011. Held for repairs.
+<li> Borrowed by: <a href="mailto:js@suncan.com">Jeff Swick</a>, February 25, 2011.
+<li> Borrowed by: <a href="mailto:elissabresciani@gmail.com">Elissa Bresciani</a>, January 23, 2011.
+<li> Borrowed by: <a href="mailto:js@suncan.com">Jeff Swick</a>, September 27, 2010.
+<li> Borrowed by: <a href="mailto:jrpatterson@shaw.ca">John Patterson</a>, April 7, 2010, returned September 13, 2010.
+</ul>
+<hr>
+
+<center>
+<img src="images/meade_lightbridge.gif"><p>
+</center>
+The skywatcher comes with a straight through finder (6x 50), 25mm & 10mm Plossl eyepieces and a 2 inch eyepiece adapter. Here is a <a href="ScopeList.pdf">list</a> of the parts - please print the list if you rent this telescope.<p> 
+<a name="8MC"><b>History of the 8 inch Meade Meade Star-Watcher 3</b></a>
+<ul>
+<li>Borrowed by:  <a href="mailto:alan.b@usask.ca">Alan Blanchet</a>, August 1, 2015.
+<li>Borrowed by: <a href="mailto:jerod@saskdentists.com">Jerod Orb</a> - returned to U of S Observatory, July 21, 2015.
+<li>Borrowed by: <a href="mailto:vincent.martin.ca@gmail.com">Vincent Martin</a>, November 19, 2013.
+<li>Borrowed by: <a href="mailto:cardinal.photography@gmail.com">Sean Cardinal</a>, November 2, 2011 to November 15, 2013.
+<li>Borrowed by: Rick Huziak for SSSP, August 21 to 29, 2011. 
+<li>Borrowed by: Harvey Dueck, RASC Vancouver, February 2 to February 8, 2009 - paid $20
+</ul>
+<hr>
+
+<a name="5C"><b>History of the 5 inch C-5 Reflector</b></a>
+<ul>
+<li>Removed from lending pool by Executive vote, October 21, 1996
+<li>Borrowed by: Sandy Ferguson, 931-3184, September 6, 1996
+</ul>
+<hr>
+
+ 
+
+<!-- AND NEW DATA ENDS HERE --> 
+
+</font>
+</td>
+
+</table></td>
+
+</tr></table>
+
+</body>
+</html>

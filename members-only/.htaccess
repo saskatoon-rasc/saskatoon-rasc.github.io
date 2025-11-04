@@ -1,0 +1,4 @@
+AuthUserFile /page/g/s/ges125/rasc/members-only/.htpasswd
+AuthName "Members Only"  
+AuthType Basic 
+require valid-user

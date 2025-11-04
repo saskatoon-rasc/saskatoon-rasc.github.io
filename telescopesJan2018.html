@@ -1,0 +1,192 @@
+<html>
+
+<HEAD>
+
+<TITLE> RASC Telescopes </TITLE>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</HEAD>
+
+<body bgcolor="000000">
+
+<script language="JavaScript"><!--
+
+browserName = navigator.appName;
+
+browserVer = parseInt ( navigator.appVersion );
+
+
+
+version = "n2";
+
+if ( browserName == "Netscape" && browserVer >= 3 ) version = "n3";
+
+if ( browserName == "Microsoft Internet Explorer" && browserVer >=4 ) version = "e4";
+
+
+
+if ( version == "n3" || version == "e4" )
+
+{
+
+		home_on = new Image ( 134, 38 );
+		home_on.src = "menuimages/lt_home_on.jpg";
+	    about_on = new Image ( 134, 38 );
+		about_on.src = "menuimages/lt_about_on.jpg";
+		executive_on = new Image ( 134, 38 );
+		executive_on.src = "menuimages/lt_executive_on.jpg";
+		activities_on = new Image ( 134, 38 );
+		activities_on.src = "menuimages/lt_activities_on.jpg";
+		newsletters_on = new Image ( 134, 38 );
+		newsletters_on.src = "menuimages/lt_newsletters_on.jpg";
+		clearsky_on = new Image ( 134, 38 );
+		clearsky_on.src = "menuimages/lt_clearsky_on.jpg";
+		link_on = new Image ( 134, 38 );
+		link_on.src = "menuimages/lt_link_on.jpg";
+		starparty_on = new Image ( 134, 38 );
+		starparty_on.src = "menuimages/lt_starparty_on.jpg";
+		telescopes_on = new Image ( 134, 38 );
+		telescopes_on.src = "menuimages/lt_telescopes_selected.jpg";
+
+		home_off = new Image ( 134, 38 );
+		home_off.src = "menuimages/lt_home_off.jpg";
+		about_off = new Image ( 134, 38 );
+		about_off.src = "menuimages/lt_about_off.jpg";
+		executive_off = new Image ( 134, 38 );
+		executive_off.src = "menuimages/lt_executive_off.jpg";
+		activities_off = new Image ( 134, 38 );
+		activities_off.src = "menuimages/lt_activities_off.jpg";
+		newsletters_off = new Image ( 134, 38 );
+		newsletters_off.src = "menuimages/lt_newsletters_off.jpg";
+		clearsky_off = new Image ( 134, 38 );
+		clearsky_off.src = "menuimages/lt_clearsky_off.jpg";
+		link_off = new Image ( 134, 38 );
+		link_off.src = "menuimages/lt_link_off.jpg";
+		starparty_off = new Image ( 134, 38 );
+		starparty_off.src = "menuimages/lt_starparty_off.jpg";
+		telescopes_off = new Image ( 134, 38 );
+		telescopes_off.src = "menuimages/lt_telescopes_selected.jpg";
+
+
+
+
+
+
+}
+
+
+
+function button_on ( imgName )
+
+{
+
+        if ( version == "n3" || version == "e4" )
+
+        {
+
+                butOn = eval ( imgName + "_on.src" );
+
+                document [imgName].src = butOn;
+
+        }
+
+}
+
+
+
+function button_off ( imgName )
+
+{
+
+        if ( version == "n3" || version == "e4" )
+
+        {
+
+                butOff = eval ( imgName + "_off.src" );
+
+                document [imgName].src = butOff;
+
+        }
+
+}
+
+// --></script>
+
+
+<table border=0 width=100% cellpadding=10 cellspacing=0 height=100%>
+<tr>
+<td valign=top>
+<table border=0 cellpadding=0 cellspacing=0 valign=top>
+<tr><td><a href="index.html"><img src="menuimages/lt_g3_1s2.jpg" border="0" width="134" height="125"></a></td></tr>
+<tr><td><a href="index.html"onmouseout="button_off('home'); return true" onmouseover="button_on('home'); return true"><img src="menuimages/lt_home_off.jpg" border="0" width="134" height="38" name="home"></a></td></tr>
+<tr><td><a href="about_rasc.html"onmouseout="button_off('about'); return true" onmouseover="button_on('about'); return true"><img src="menuimages/lt_about_off.jpg" border="0" width="134" height="38" name="about"></a></td></tr>
+<tr><td><a href="executive.html"onmouseout="button_off('executive'); return true" onmouseover="button_on('executive'); return true"><img src="menuimages/lt_executive_off.jpg" border="0" width="134" height="38" name="executive"></a></td></tr>
+<tr><td><a href="activities.html"onmouseout="button_off('activities'); return true" onmouseover="button_on('activities'); return true"><img src="menuimages/lt_activities_off.jpg" border="0" width="134" height="38" name="activities"></a></td></tr>
+<tr><td><a href="newsletters.html"onmouseout="button_off('newsletters'); return true" onmouseover="button_on('newsletters'); return true"><img src="menuimages/lt_newsletters_off.jpg" border="0" width="134" height="38" name="newsletters"></a></td></tr>
+<tr><td><a href="clearsky.html"onmouseout="button_off('clearsky'); return true" onmouseover="button_on('clearsky') ; return true"><img src="menuimages/lt_clearsky_off.jpg" border="0" width="134" height="38" name="clearsky"></a></td></tr>
+<tr><td><a href="link.html"onmouseout="button_off('link'); return true" onmouseover="button_on('link'); return true"><img src="menuimages/lt_link_off.jpg" border="0" width="134" height="38" name="link"></a></td></tr>
+<tr><td><a href="starparty.html"onmouseout="button_off('starparty'); return true" onmouseover="button_on('starparty'); return true"><img src="menuimages/lt_starparty_off.jpg" border="0" width="134" height="38" name="starparty"></a></td></tr>
+<tr><td><a href="telescopes.html"onmouseout="button_off('telescopes'); return true" onmouseover="button_on('telescopes'); return true"><img src="menuimages/lt_telescopes_selected.jpg" border="0" width="134" height="38" name="telescopes"></a></td>
+</table></td>
+
+<td valign=top bgcolor="FFFFFF"><font face="times">
+<center><img src="images/centre_header.jpg" border=0></center>
+<br><br>
+
+<!-- NEW DATA GOES HERE *NOTE: CHANGE THE MENU GRPAHIC FOR THE CORRESPONDING PAGE GROUP TO THE "selected" VERSION INSTEAD OF "on" AND "off" VERSIONS IN THE JAVASCRIPT ABOVE -->
+
+<center>
+<h3><a href="rent.html">Telescope Rental Program</a></h3>
+</center>
+
+We have the following telescopes available for rent (click on the telescope
+you are interested in to find out where it is):
+
+<ol>
+<li> <a href="rent.html#4T">3.1 inch Tasco refractor</a>
+<li> <a href="rent.html#4A">4 inch Astroscan compact reflector</a> 
+<li> <a href="rent.html#6R">6 inch rich field reflector</a> 
+<li> <a href="rent.html#8MA">Meade 8 inch skywatchers - telescope 1</a>
+<li> <a href="rent.html#8MB">Meade 8 inch skywatchers - telescope 2</a>
+<li> <a href="rent.html#8MC">Meade 8 inch skywatchers - telescope 3</a>
+<li> <a href="rent.html#8MD">Eyepiece Set: 30mm 13mm 8mm 5mm</a>
+</ol>
+
+<center>
+<h3>The Saskatoon Centre's (New) 16" Telescope</h3>
+</center>
+
+In September 2006, the Saskatoon Centre purchased a Classic Meade LX-200 16" telescope from the Toronto Centre. This telescope will temporarily be mounted in the University of Saskatchewan Roll-off building at the Sleaford Observatory until the RASC has the funds to build our own observatory, anticipated approximately two years from now. The telescope is expected to be mounted and functional in November 2006.<p>
+
+The agreement to use the U of S facility means that for some of the time, the U of S will have exclusive access to the telescope for astronomy labs, typically September through November on Monday, Tuesday, Wednesday between 7:30 pm and 10:00 pm. At other times, the scope will be available to RASC members who have been trained to use the roll-off building and the 16" scope. (Other scopes within the roll-off may also be available for use with training). The telescope will be located on the east-most of the 4 piers in the roll-off.<p>
+
+The photos of the scope were taken at the October 16 General Meeting of the Saskatoon Centre when we were given of tour as the telescope was being checked out in the Physics department basement. The telescope will be final mounted on a custom polar aligned pier fabricated by the U of S and paid for by the RASC under the Sleaford joint-use agreement. The telescope has go-to capability, and with such a large instrument, this is certainly an asset. The telescope has a hand-controller by which the scope can be slewed, but best control is achieved by controlling movement and positioning with a computer that will run Earth Centred Universe (ECU); the standard planetarium and control software used by the U of S.<p>
+
+An RASC training manual for the roll-off & telescopes is available <a href="TheSleafordObservatoryUsersManual.pdf">here</a>. 
+A copy of the Meade manual is available 
+<a href="Meade16LX200Classic_manual.pdf">here</a>. If you anticipate using the telescope in the future, please read the manual in advance of your training. Most of the training will be conducted by Richard Huziak. If there are other LX-200 users in our club that might want to assist in training, please contact Rick. We are currently figuring out all of the details about keys, training, manuals and operation, so please be patient, but remain excited!<p>
+
+<center>
+<img src="16scope1.gif"><p>
+</center>
+
+<center>
+<img src="16scope2.gif"><p>
+</center>
+
+<center>
+<img src="16scope3.gif"><p>
+</center>
+
+
+<!-- AND NEW DATA ENDS HERE --> 
+
+</font>
+</td>
+
+</table></td>
+
+</tr></table>
+
+</body>
+</html>

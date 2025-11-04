@@ -1,0 +1,170 @@
+<html>
+
+<HEAD>
+
+<TITLE> RASC - Saskatoon Centre </TITLE>
+
+</HEAD>
+
+<body bgcolor="#000000">
+
+
+
+<script language="JavaScript"><!--
+
+browserName = navigator.appName;
+
+browserVer = parseInt ( navigator.appVersion );
+
+
+
+version = "n2";
+
+if ( browserName == "Netscape" && browserVer >= 3 ) version = "n3";
+
+if ( browserName == "Microsoft Internet Explorer" && browserVer >=4 ) version = "e4";
+
+
+
+if ( version == "n3" || version == "e4" )
+
+{
+
+
+
+        about_on = new Image ( 134, 94 );
+		about_on.src = "menuimages/about_on.jpg";
+		executive_on = new Image ( 72, 69 );
+		executive_on.src = "menuimages/executive_on.jpg";
+		activities_on = new Image ( 72, 69 );
+		activities_on.src = "menuimages/activities_on.jpg";
+		newsletters_on = new Image ( 134, 70 );
+		newsletters_on.src = "menuimages/newsletters_on.jpg";
+		clearsky_on = new Image ( 134, 94 );
+		clearsky_on.src = "menuimages/clearsky_on.jpg";
+		link_on = new Image ( 134, 94 );
+		link_on.src = "menuimages/link_on.jpg";
+		starparty_on = new Image ( 134, 94 );
+		starparty_on.src = "menuimages/starparty_on.jpg";
+		telescopes_on = new Image ( 134, 70);
+		telescopes_on.src = "menuimages/telescopes_on.jpg";
+
+		about_off = new Image ( 134, 94 );
+		about_off.src = "menuimages/about_off.jpg";
+		executive_off = new Image ( 134, 108 );
+		executive_off.src = "menuimages/executive_off.jpg";
+		activities_off = new Image ( 134, 108 );
+		activities_off.src = "menuimages/activities_off.jpg";
+		newsletters_off = new Image ( 134, 70 );
+		newsletters_off.src = "menuimages/newsletters_off.jpg";
+		clearsky_off = new Image ( 134, 94 );
+		clearsky_off.src = "menuimages/clearsky_off.jpg";
+		link_off = new Image ( 134, 108 );
+		link_off.src = "menuimages/link_off.jpg";
+		starparty_off = new Image ( 134, 108 );
+		starparty_off.src = "menuimages/starparty_off.jpg";
+		telescopes_off = new Image ( 134, 70 );
+		telescopes_off.src = "menuimages/telescopes_off.jpg";
+
+
+
+
+
+
+}
+
+
+
+function button_on ( imgName )
+
+{
+
+        if ( version == "n3" || version == "e4" )
+
+        {
+
+                butOn = eval ( imgName + "_on.src" );
+
+                document [imgName].src = butOn;
+
+        }
+
+}
+
+
+
+function button_off ( imgName )
+
+{
+
+        if ( version == "n3" || version == "e4" )
+
+        {
+
+                butOff = eval ( imgName + "_off.src" );
+
+                document [imgName].src = butOff;
+
+        }
+
+}
+
+// --></script>
+
+
+<TABLE BORDER=0 cellpadding=0 cellspacing=0 height=100% width=100%>
+
+
+<TR>
+
+
+
+<td align=center>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="about_rasc.html"onmouseout="button_off('about'); return true" onmouseover="button_on('about'); return true"><img src="menuimages/about_off.jpg" border="0" width="134" height="94" name="about"></a></td></tr>
+
+<tr><td><a href="executive.html"onmouseout="button_off('executive'); return true" onmouseover="button_on('executive'); return true"><img src="menuimages/executive_off.jpg" border="0" width="134" height="108" name="executive"></a></td></tr>
+
+<tr><td><a href="activities.html"onmouseout="button_off('activities'); return true" onmouseover="button_on('activities'); return true"><img src="menuimages/activities_off.jpg" border="0" width="134" height="108" name="activities"></a></td></tr>
+
+<tr><td><a href="newsletters.html"onmouseout="button_off('newsletters'); return true" onmouseover="button_on('newsletters'); return true"><img src="menuimages/newsletters_off.jpg" border="0" width="134" height="70" name="newsletters"></a></td></tr></table>
+
+</td>
+
+<td align=center valign=middle><a href="about_rasc.html"><IMG SRC="images/home4.jpg" border="0" width="360" height="396"></a></td>
+
+<td align=center>
+
+<table border=0 cellpadding=0 cellspacing=0>
+
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="clearsky.html"onmouseout="button_off('clearsky'); return true" onmouseover="button_on('clearsky') ; return true"><img src="menuimages/clearsky_off.jpg" border="0" width="134" height="94" name="clearsky"></a></td></tr>
+
+
+<tr><td><a href="link.html"onmouseout="button_off('link'); return true" onmouseover="button_on('link'); return true"><img src="menuimages/link_off.jpg" border="0" width="134" height="108" name="link"></a></td></tr>
+
+<tr><td><a href="starparty.html"onmouseout="button_off('starparty'); return true" onmouseover="button_on('starparty'); return true"><img src="menuimages/starparty_off.jpg" border="0" width="134" height="108" name="starparty"></a></td></tr>
+
+<tr><td><a href="telescopes.html"onmouseout="button_off('telescopes'); return true" onmouseover="button_on('telescopes'); return true"><img src="menuimages/telescopes_off.jpg" border="0" width="134" height="70" name="telescopes"></a></td></tr></table>
+
+
+</td>
+
+
+</tr>
+
+
+
+<tr><td colspan=3 align=center valign=middle>
+<p><font face="arial,helvetica,sans-serif" size="1" color="#ffffff">Web site maintained by <a href="mailto:gordon.sarty@usask.ca?subject=RASC Saskatoon Centre Web Site">Gordon Sarty</a></font></p>
+<p><font face="arial,helvetica,sans-serif" size="1" color="#ffffff"><i>Hubble Telescope image of NGC 4414 courtesy of the Space Telescope Science Institute</i></font></p>
+</td></tr>
+</table>
+
+
+
+</body>
+
+</html>

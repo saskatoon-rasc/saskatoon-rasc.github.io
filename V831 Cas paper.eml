@@ -1,0 +1,113 @@
+Return-path: <laszlo@physics.usyd.edu.au>
+Received: from conversion-daemon.mail.usask.ca by mail.usask.ca
+ (iPlanet Messaging Server 5.2 HotFix 2.18 (built Jul  3 2007))
+ id <0JYQ00K0187WRK@mail.usask.ca> for ges125@mail.usask.ca; Wed,
+ 02 Apr 2008 20:05:08 -0600 (CST)
+Received: from smtp.usask.ca (smtp.usask.ca [128.233.192.40])
+ by mail.usask.ca (iPlanet Messaging Server 5.2 HotFix 2.18 (built Jul  3
+ 2007)) with ESMTP id <0JYQ00G0I8GKCC@mail.usask.ca> for ges125@mail.usask.ca
+ (ORCPT gordon.sarty@usask.ca); Wed, 02 Apr 2008 20:05:08 -0600 (CST)
+Received: from conversion-daemon.usask.ca by usask.ca
+ (iPlanet Messaging Server 5.2 HotFix 2.18 (built Jul  3 2007))
+ id <0JYQ00K018C16D@usask.ca> (original mail from laszlo@physics.usyd.edu.au)
+ for ges125@mail.usask.ca (ORCPT gordon.sarty@usask.ca); Wed,
+ 02 Apr 2008 20:05:08 -0600 (CST)
+Received: from spamf4.usask.ca (spamf4.usask.ca [128.233.150.98])
+ by usask.ca (iPlanet Messaging Server 5.2 HotFix 2.18 (built Jul  3 2007))
+ with ESMTP id <0JYQ00CAQ8GK3F@usask.ca> for ges125@mail.usask.ca
+ (ORCPT gordon.sarty@usask.ca); Wed, 02 Apr 2008 20:05:08 -0600 (CST)
+Received: from spamf4.usask.ca (localhost.localdomain [127.0.0.1])
+	by localhost (Postfix) with SMTP id C2A3C2BBED	for <gordon.sarty@usask.ca>;
+ Wed, 02 Apr 2008 20:05:07 -0600 (CST)
+Received: from suphys.physics.usyd.edu.au
+ (suphys.physics.usyd.edu.au [129.78.129.1])	by spamf4.usask.ca (Postfix)
+ with ESMTP id EEF8C2BAD6	for <gordon.sarty@usask.ca>; Wed,
+ 02 Apr 2008 20:05:06 -0600 (CST)
+Received: from sunderland.physics.usyd.edu.au
+ (sunderland.physics.usyd.edu.au [129.78.129.173])
+	by suphys.physics.usyd.edu.au (8.13.8/8.13.8) with ESMTP id m33251lw002717	for
+ <gordon.sarty@usask.ca>; Thu, 03 Apr 2008 13:05:01 +1100
+Date: Thu, 03 Apr 2008 13:05:03 +1000
+From: Laszlo Kiss <laszlo@physics.usyd.edu.au>
+Subject: Re: V831 Cas paper
+In-reply-to: <47A7FABC.5090400@usask.ca>
+To: "Gordon E. Sarty" <gordon.sarty@usask.ca>
+Message-id: <200804031305.03937.laszlo@physics.usyd.edu.au>
+MIME-version: 1.0
+Content-type: text/plain; charset=iso-8859-2
+Content-transfer-encoding: 7bit
+Content-disposition: inline
+User-Agent: KMail/1.8.2
+X-PMX-Version: 5.4.1.325704, Antispam-Engine: 2.6.0.325393,
+ Antispam-Data: 2008.4.2.185136
+X-PerlMx-Spam: Gauge=IIIIIII, Probability=7%, Report='__CD 0, __CP_NOT_1 0,
+ __CT 0, __CTE 0, __CT_TEXT_PLAIN 0, __HAS_MSGID 0, __MIME_TEXT_ONLY 0,
+ __MIME_VERSION 0, __SANE_MSGID 0, __USER_AGENT 0'
+References: <47A7FABC.5090400@usask.ca>
+Original-recipient: rfc822;gordon.sarty@usask.ca
+
+Hi Gordon,
+
+I finally got an opportunity to sit down in a quite corner and read through 
+the V831 Cas paper - sorry for that. Here are my notes:
+
+- Abstract, 3rd line: remove "known" (it's already there in the 2nd line)
+- last line: dusk -> disk
+- Intro, first sentence: too long.
+- 9th line: classification ... are -> class ... is that of the
+- p.2, Table 1 -> move table caption to the top of the Table (and in all other 
+Tables as well)
+- 3rd line in Sect. 2.1: Johnston -> Johnson
+- the last few sentences in Sect. 2.1: this mixture of data reductions may 
+open a range of criticism from a not-so-friedly referee. Some discussion of 
+why this was acceptable would be helpful to avoid that. 
+- p.3., Fig.2. It's a bit messy. For example, why wasn't the last chunk of 
+data shown in the bottom panel? Right now the lowest one precedes the one 
+above it. The different time-spans of the panels are a bit confusing. Somehow 
+the overview of the light curve could be nicer. 
+- p.4, "relatively neutral B-V" in Fig. 1. Why "neutral"? These all have 
+similar colour indices as V831 Cas, with good chances of being cluster 
+members and in that case being similarly B type stars. 
+- Fig.3: there is not much significant colour variation at all. Is it really 
+worth putting a whole figure that doesn't show anything? 
+- lower left corner in p.4: Echelle design ... 1st specral order.
+I don't understand it. Echelle spectrographs are usually used in high spectral 
+orders, allowing the detection of many spectral orders thanks to a cross 
+disperser. Wasn't that an ordinary Cassegrain spectrograph? A few sentences 
+before that is told. 
+- 6th line before Sect. 2.2. ends: The spectra were extracted and wavelength 
+calibrated against the emission lines from an Fe-Ar lamp...
+- p.5, Fig. 4: labels of spectral lines above the top spectrum would help
+- p.5, Fig.5: the outbursts seems to be placed quite equidistantly - was there 
+any attempt to derive a mean recurrence time? Any periodicity in the X-ray 
+outbursts?
+- 6th line in Sect. 3.3: compatable -> compatible
+- the three discussions of frequencies would probably be more readable in a 
+Table, in which we compare different solutions. 
+- pp.6-7, Sect. 3.4 contains some statements, which sound a bit overconfident 
+to me. Like the one at the end that "we can conclude without a doubt that the 
+orbital period is of the order of 1 day, not 300 days..."
+
+I think we can drop the doubts only if we measure the orbital period. We have 
+not been able to do so because of the limited spectroscopic dataset. chi2 
+values of 33-36  would cause anyone to laugh at us if we used Fig. 8 to claim 
+that there is no doubt at all about the orbital period's range. What if the 
+Be star does something weird? If you look, for example, at zeta Oph's MOST 
+paper and cited references, B/Be stars can have all kinds of periodicities 
+from all kinds of different mechanisms. I doubt that we can assume that Fig. 
+8 reflects only orbital motion, excluding all other possibilities.
+
+- I believe the calculations in Sect. 4 are correct, what puzzles me is how 
+compatible are all those X-ray data in the literature with a rapidly spinning 
+white dwarf. Is there really place to change an NS to a WD without changing 
+drastically the interpretation of decades of X-ray data? It's seems to be a 
+huge change, by maybe I'm wrong - I'm nowhere near an expert in the field.
+If the star is member of a cluster, there is presumably an age estimate. Was 
+there enough time to form a WD within that age? NSs can from quickly from the 
+massive progenitors, but what about the youngest WDs known (in other open 
+clusters)? Are they compatible with the age estimate of V831 Cas?
+
+These are the things that come to my mind in a first read. I may ask too much, 
+please treat all my notes only as an attempt to be a hostile referee.
+
+Laszlo
