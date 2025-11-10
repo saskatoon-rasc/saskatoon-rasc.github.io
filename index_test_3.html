@@ -63,15 +63,21 @@
       transform: scale(1.05);
     }
 
-    /* --- Hamburger Icon --- */
-    .hamburger {
+    /* --- Hamburger and Menu Label --- */
+    .hamburger-container {
       display: none;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+
+    .hamburger {
+      display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 5px;
       width: 30px;
       height: 25px;
-      cursor: pointer;
     }
 
     .hamburger div {
@@ -81,9 +87,28 @@
       transition: all 0.3s ease;
     }
 
+    .menu-label {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      user-select: none;
+    }
+
+    /* Hamburger animation to “X” */
+    .hamburger.open div:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    .hamburger.open div:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.open div:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
     /* --- Collapsible Menu (Mobile) --- */
     @media (max-width: 768px) {
-      .hamburger {
+      .hamburger-container {
         display: flex;
       }
 
@@ -154,11 +179,15 @@
   <!-- Navigation Bar -->
   <nav>
     <div class="nav-container">
-      <div class="hamburger" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="hamburger-container" id="hamburger-container">
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <span class="menu-label">Menu</span>
       </div>
+
       <div class="nav-links" id="nav-links">
         <a href="about_rasc.html">About RASC</a>
         <a href="executive.html">Executive</a>
@@ -192,8 +221,9 @@
     // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
+    const hamburgerContainer = document.getElementById('hamburger-container');
 
-    hamburger.addEventListener('click', () => {
+    hamburgerContainer.addEventListener('click', () => {
       navLinks.classList.toggle('show');
       hamburger.classList.toggle('open');
     });
