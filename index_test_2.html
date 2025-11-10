@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RASC - Saskatoon Centre</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     body {
       margin: 0;
@@ -14,47 +14,61 @@
       text-align: center;
     }
 
-    header, footer {
+    header {
       padding: 1rem;
     }
 
-    main {
+    header h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    /* --- Navigation Bar --- */
+    nav {
+      background-color: #111;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      padding: 1rem;
-      gap: 1rem;
+      gap: 1.5rem;
+      padding: 0.8rem 1rem;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .menu-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
+    nav a {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.2s ease, transform 0.2s ease;
     }
 
-    .menu-column a img {
-      max-width: 120px;
-      height: auto;
-      border: none;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .menu-column a img:hover {
+    nav a:hover {
+      color: #4da6ff;
       transform: scale(1.05);
-      opacity: 0.8;
+    }
+
+    main {
+      padding: 1.5rem;
     }
 
     .main-image img {
       max-width: 90vw;
       height: auto;
       border: none;
+      border-radius: 10px;
     }
 
     footer {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: #ccc;
+      margin-top: 2rem;
+      padding: 1rem;
+      border-top: 1px solid #333;
     }
 
     footer a {
@@ -65,6 +79,26 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* --- Mobile Adjustments --- */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      nav a {
+        font-size: 1.1rem;
+      }
+
+      .main-image img {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -73,23 +107,23 @@
     <h1>RASC - Saskatoon Centre</h1>
   </header>
 
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="about_rasc.html">About RASC</a>
+    <a href="executive.html">Executive</a>
+    <a href="activities.html">Activities</a>
+    <a href="newsletters.html">Newsletters</a>
+    <a href="clearsky.html">Clear Sky</a>
+    <a href="link.html">Links</a>
+    <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
+    <a href="telescopes.html">Telescopes</a>
+  </nav>
+
   <main>
-    <div class="menu-column">
-      <a href="about_rasc.html"><img src="menuimages/about_off.jpg" alt="About RASC"</a>
-      <a href="executive.html"><img src="menuimages/executive_off.jpg" alt="Executive"></a>
-      <a href="activities.html"><img src="menuimages/activities_off.jpg" alt="Activities"></a>
-      <a href="newsletters.html"><img src="menuimages/newsletters_off.jpg" alt="Newsletters"></a>
-    </div>
-
     <div class="main-image">
-      <a href="about_rasc.html"><img src="images/home4.jpg" alt="RASC Home"></a>
-    </div>
-
-    <div class="menu-column">
-      <a href="clearsky.html"><img src="menuimages/clearsky_off.jpg" alt="Clear Sky"></a>
-      <a href="link.html"><img src="menuimages/link_off.jpg" alt="Links"></a>
-      <a href="https://sssp.saskatoon.rasc.ca/" target="_blank"><img src="menuimages/starparty_off.jpg" alt="Star Party"></a>
-      <a href="telescopes.html"><img src="menuimages/telescopes_off.jpg" alt="Telescopes"></a>
+      <a href="about_rasc.html">
+        <img src="images/home4.jpg" alt="RASC Home">
+      </a>
     </div>
   </main>
 
@@ -98,9 +132,7 @@
       Website maintained by
       <a href="mailto:ttuomi@sasktel.net?subject=RASC Saskatoon Centre Web Site">Tenho Tuomi</a>
     </p>
-    <p>
-      <i>Hubble Telescope image of NGC 4414 courtesy of the Space Telescope Science Institute</i>
-    </p>
+    <p><i>Hubble Telescope image of NGC 4414 courtesy of the Space Telescope Science Institute</i></p>
   </footer>
 
 </body>
