@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RASC - Saskatoon Centre</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    header, footer {
+      padding: 1rem;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    .menu-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .menu-column a img {
+      max-width: 120px;
+      height: auto;
+      border: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .menu-column a img:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+
+    .main-image img {
+      max-width: 90vw;
+      height: auto;
+      border: none;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #4da6ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>RASC - Saskatoon Centre</h1>
+  </header>
+
+  <main>
+    <div class="menu-column">
+      <a href="about_rasc.html"><img src="menuimages/about_off.jpg" alt="About RASC"</a>
+      <a href="executive.html"><img src="menuimages/executive_off.jpg" alt="Executive"></a>
+      <a href="activities.html"><img src="menuimages/activities_off.jpg" alt="Activities"></a>
+      <a href="newsletters.html"><img src="menuimages/newsletters_off.jpg" alt="Newsletters"></a>
+    </div>
+
+    <div class="main-image">
+      <a href="about_rasc.html"><img src="images/home4.jpg" alt="RASC Home"></a>
+    </div>
+
+    <div class="menu-column">
+      <a href="clearsky.html"><img src="menuimages/clearsky_off.jpg" alt="Clear Sky"></a>
+      <a href="link.html"><img src="menuimages/link_off.jpg" alt="Links"></a>
+      <a href="https://sssp.saskatoon.rasc.ca/" target="_blank"><img src="menuimages/starparty_off.jpg" alt="Star Party"></a>
+      <a href="telescopes.html"><img src="menuimages/telescopes_off.jpg" alt="Telescopes"></a>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Website maintained by
+      <a href="mailto:ttuomi@sasktel.net?subject=RASC Saskatoon Centre Web Site">Tenho Tuomi</a>
+    </p>
+    <p>
+      <i>Hubble Telescope image of NGC 4414 courtesy of the Space Telescope Science Institute</i>
+    </p>
+  </footer>
+
+</body>
+</html>
