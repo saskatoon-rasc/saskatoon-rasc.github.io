@@ -83,7 +83,13 @@
 
     /* --- Collapsible Menu (Mobile) --- */
     
-    <button class="menu-toggle" aria-label="Toggle Navigation">
+   
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+ <button class="menu-toggle" aria-label="Toggle Navigation">
   <span class="menu-text">MENU</span>
   <div class="hamburger-icon">
     <span class="bar"></span>
@@ -91,12 +97,6 @@
     <span class="bar"></span>
   </div>
 </button>
-
-    @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-
       .nav-links {
         display: none;
         flex-direction: column;
