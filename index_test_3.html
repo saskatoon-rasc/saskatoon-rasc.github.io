@@ -26,11 +26,6 @@
     /* --- Navigation Bar --- */
     nav {
       background-color: #111;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 0.8rem 1rem;
       border-top: 1px solid #333;
       border-bottom: 1px solid #333;
       position: sticky;
@@ -38,7 +33,23 @@
       z-index: 1000;
     }
 
-    nav a {
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
       color: #fff;
       font-size: 1.2rem;
       font-weight: bold;
@@ -47,9 +58,52 @@
       transition: color 0.2s ease, transform 0.2s ease;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: #4da6ff;
       transform: scale(1.05);
+    }
+
+    /* --- Hamburger Icon --- */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    /* --- Collapsible Menu (Mobile) --- */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        background-color: #111;
+        border-top: 1px solid #333;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 1.1rem;
+      }
     }
 
     main {
@@ -80,19 +134,9 @@
       text-decoration: underline;
     }
 
-    /* --- Mobile Adjustments --- */
     @media (max-width: 600px) {
       header h1 {
-        font-size: 1.5rem;
-      }
-
-      nav {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      nav a {
-        font-size: 1.1rem;
+        font-size: 1.6rem;
       }
 
       .main-image img {
@@ -109,14 +153,23 @@
 
   <!-- Navigation Bar -->
   <nav>
-    <a href="about_rasc.html">About RASC</a>
-    <a href="executive.html">Executive</a>
-    <a href="activities.html">Activities</a>
-    <a href="newsletters.html">Newsletters</a>
-    <a href="clearsky.html">Clear Sky</a>
-    <a href="link.html">Links</a>
-    <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
-    <a href="telescopes.html">Telescopes</a>
+    <div class="nav-container">
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="about_rasc.html">About RASC</a>
+        <a href="executive.html">Executive</a>
+        <a href="activities.html">Activities</a>
+        <a href="newsletters.html">Newsletters</a>
+        <a href="clearsky.html">Clear Sky</a>
+        <a href="link.html">Links</a>
+        <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
+        <a href="telescopes.html">Telescopes</a>
+      </div>
+    </div>
   </nav>
 
   <main>
@@ -134,6 +187,17 @@
     </p>
     <p><i>Hubble Telescope image of NGC 4414 courtesy of the Space Telescope Science Institute</i></p>
   </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('open');
+    });
+  </script>
 
 </body>
 </html>
