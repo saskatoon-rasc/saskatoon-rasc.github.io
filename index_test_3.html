@@ -113,17 +113,22 @@
       }
 
       .nav-links {
-        display: none;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        padding: 1rem 0;
         background-color: #111;
         border-top: 1px solid #333;
+
+        /* Hidden by default */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
       }
 
       .nav-links.show {
-        display: flex;
+        max-height: 400px; /* enough to reveal all links */
+        opacity: 1;
       }
 
       .nav-links a {
