@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RASC Saskatoon Centre Newsletters</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-   <style>
+  <style>
     body {
       margin: 0;
       background-color: #000;
@@ -142,22 +142,25 @@
 
 <body>
 
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">
-      &#9776;<span>Menu</span>
-    </button>
-    <nav id="menu">
+  <!-- Responsive Navigation Menu -->
+  <nav>
+    <div class="nav-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        ☰ <span>Menu</span>
+      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="about_rasc.html">About</a>
       <a href="executive.html">Executive</a>
-      <a href="activities.html">Activities</a>
-      <a href="newsletters.html" class="active">Newsletters</a>
+      <a href="activities.html" class="active">Activities</a>
+      <a href="newsletters.html">Newsletters</a>
       <a href="clearsky.html">Clear Sky</a>
       <a href="link.html">Links</a>
       <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
       <a href="telescopes.html">Telescopes</a>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <div class="content">
     <h2>Archived Newsletters (1974 - 2024)</h2>
