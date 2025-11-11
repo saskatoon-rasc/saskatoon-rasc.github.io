@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About RASC Saskatoon Centre</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* NAVIGATION STYLES */
+    nav {
+      background-color: #000;
+      border-bottom: 2px solid #444;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .nav-logo img {
+      height: 60px;
+    }
+
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    .menu-toggle span {
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 15px;
+      font-size: 18px;
+      border-top: 1px solid #333;
+    }
+
+    .nav-links a:hover {
+      background-color: #333;
+    }
+
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        width: auto;
+      }
+
+      .nav-links a {
+        border: none;
+        margin: 0 10px;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    /* CONTENT STYLING */
+    .content {
+      background-color: #fff;
+      color: #000;
+      padding: 30px;
+      max-width: 900px;
+      margin: 30px auto;
+      box-sizing: border-box;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+                  0 0 40px rgba(0, 0, 0, 0.4);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      color: #000;
+      vertical-align: top;
+    }
+
+    a {
+      color: #0000ee;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 15px;
+        font-size: 16px;
+        margin: 15px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Responsive Navigation Menu -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="index.html"><img src="menuimages/lt_g3_1s2.jpg" alt="RASC Saskatoon Logo"></a>
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        ☰ <span>Menu</span>
+      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about_rasc.html" style="text-decoration: underline;">About</a>
+      <a href="executive.html">Executive</a>
+      <a href="activities.html">Activities</a>
+      <a href="newsletters.html">Newsletters</a>
+      <a href="clearsky.html">Clear Sky</a>
+      <a href="link.html">Links</a>
+      <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
+      <a href="telescopes.html">Telescopes</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <table>
+      <tr>
+        <td>
+          <img src="images/centre_header2.jpg" width="600" border="0" alt="RASC Header">
+        </td>
+        <td>
+          <h2>About RASC</h2>
+        </td>
+      </tr>
+    </table>
+
+    <img src="images/rasc_info_group.jpg" align="left" hspace="10" alt="RASC Info Group">
+
+    <p>The Saskatoon Centre of the Royal Astronomical Society of Canada (RASC) 
+      meets on the third Monday of every month from September through June at 8:00 
+      p.m. at the U. of S. Observatory, 108 Wiggins Rd., University of Saskatchewan campus. 
+      See the <a href="currentnewsletter.pdf">latest newsletter</a> for possible changes in meeting date or location.
+    </p>
+
+    <p><b>Meetings are currently held in a hybrid format - you can attend in person, or by Zoom if you prefer.</b>
+      See the <a href="activities.html">Activities</a> page for instructions on joining the online meeting.
+    </p>
+
+    <p>The meetings are open to the general public and there is no admission fee.
+      A list of current events may be found in the 
+      <a href="newsletters.html">latest newsletter</a> and 
+      <a href="activities.html">Activities</a> page. 
+      See the <a href="http://www.rasc.ca/bulletin">RASC Bulletin</a> for National news about the RASC!
+    </p>
+
+    <table border rules="all" width="100%" cellpadding="10">
+      <tr valign="top">
+        <td>
+          <h2 style="color:blue;">How to Join the RASC Saskatoon Centre</h2>
+          <p>Membership in the Society is open to everyone who has an interest in astronomy.</p>
+          <p>As a part of Canada's national astronomy Society, members of the Saskatoon Centre receive Society publications and services including
+            the electronic edition of the <a href="http://www.rasc.ca/journal">Journal</a>,
+            and the annual <a href="http://www.rasc.ca/handbook">Observer's Handbook</a>.
+          </p>
+
+          <p><b>Membership fees* (CAD$)</b> for the Saskatoon Centre are as follows:</p>
+          <table>
+            <tr align="center">
+              <th>Regular</th><th>Youth</th><th>Family</th>
+            </tr>
+            <tr align="center">
+              <td>$111.00</td><td>$52.00</td><td>See webpage</td>
+            </tr>
+          </table>
+
+          <p>(*Payment of fees includes membership both with the Saskatoon Centre and National organization of the RASC.)</p>
+
+          <p>Email us if you only want the <b><i>Saskatoon Skies</i></b> printed/mailed subscription without membership: $15/yr.
+          (Online <a href="newsletters.html">newsletters</a> are available free.)
+          </p>
+        </td>
+
+        <td>
+          <b><center>(Visa and MasterCard are accepted)</center></b>
+
+          <h2 style="color:blue;">New Members</h2>
+          <ol>
+            <li>Join online using your credit card at <a href="http://www.rasc.ca/join">rasc.ca/join</a>.</li>
+            <li>Or call the RASC National Office Membership Coordinator (9 AM – 4:30 PM ET) at (519) 783-1529.</li>
+          </ol>
+
+          <h2 style="color:blue;">Renewing Members</h2>
+          <ol>
+            <li>Renew online at <a href="https://secure.rasc.ca/account/login?referer=membership%2Faccount">this link</a>.</li>
+            <li>Or complete your renewal form (sent by email or mail) and send it to the RASC National Office.</li>
+            <li>Or call the RASC National Office Membership Coordinator (9 AM – 5:30 PM ET) at (519) 783-1529.</li>
+          </ol>
+        </td>
+      </tr>
+    </table>
+
+    <center>
+      <br>
+      <b><span style="color:blue;">Questions about astronomy, the Saskatoon Centre or membership?</span></b>
+      <p>Email: <a href="mailto:sk_centre@rasc.ca">sk_centre@rasc.ca</a></p>
+      <p>RASC Inc.<br>PO Box 31086, RPO Broadway<br>Saskatoon, SK &nbsp;S7H 5S8</p>
+    </center>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+
+</body>
+</html>
