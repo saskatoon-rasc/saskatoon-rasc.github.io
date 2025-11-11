@@ -765,11 +765,12 @@
 <!-- AND NEW DATA ENDS HERE -->
 </p> 
 </div>  
-  <script>
-  function toggleMenu() {
-    document.getElementById('navMenu').classList.toggle('active');
-  }
-</script>
+ <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 
 
 </body>
