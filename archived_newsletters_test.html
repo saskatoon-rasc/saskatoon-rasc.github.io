@@ -15,59 +15,60 @@
 
     /* HEADER AND MENU */
     header {
-      background-color: #111;
-      padding: 1rem;
+      background-color: #000;
+      padding: 10px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
       align-items: center;
-    }
-
-    .logo img {
-      height: 60px;
-      margin-right: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .menu-toggle {
       display: flex;
       align-items: center;
       cursor: pointer;
-      font-size: 1.5rem;
+      font-size: 1.6em;
       color: white;
-      border: none;
       background: none;
+      border: none;
     }
 
     .menu-toggle span {
-      font-size: 1rem;
-      margin-left: 0.5rem;
+      margin-left: 8px;
+      font-size: 1.1em;
     }
 
     nav {
       display: none;
       flex-direction: column;
-      background-color: #222;
-    }
-
-    nav.active {
-      display: flex;
+      background-color: #111;
+      text-align: center;
+      padding: 10px 0;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      padding: 1rem;
-      text-align: center;
-      border-bottom: 1px solid #333;
-      font-size: 1.2rem;
+      padding: 8px 15px;
+      margin: 3px 6px;
+      font-size: 1em;
+      display: inline-block;
+      transition: color 0.3s, text-decoration 0.3s;
     }
 
     nav a:hover {
-      background-color: #444;
+      text-decoration: underline;
+    }
+
+    nav a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    nav.active {
+      display: flex;
     }
 
     @media (min-width: 768px) {
@@ -78,17 +79,14 @@
       nav {
         display: flex;
         flex-direction: row;
-        background: none;
+        justify-content: center;
+        background-color: #000;
+        padding: 8px 0;
       }
 
       nav a {
-        border: none;
-        padding: 0 1rem;
-      }
-
-      nav a:hover {
-        background-color: transparent;
-        text-decoration: underline;
+        margin: 0 8px;
+        font-size: 1em;
       }
     }
 
@@ -96,7 +94,11 @@
     .content {
       background-color: #fff;
       color: #000;
-      padding: 2rem;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     }
 
     h2 {
@@ -124,15 +126,17 @@
     hr {
       border: 1px solid #ccc;
     }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 
 <body>
 
   <header>
-    <div class="logo">
-      <img src="menuimages/lt_g3_1s2.jpg" alt="RASC Saskatoon Logo" />
-    </div>
     <button class="menu-toggle" onclick="toggleMenu()">
       &#9776;<span>Menu</span>
     </button>
@@ -141,7 +145,7 @@
       <a href="about_rasc.html">About</a>
       <a href="executive.html">Executive</a>
       <a href="activities.html">Activities</a>
-      <a href="newsletters.html" style="font-weight: bold; text-decoration: underline;">Newsletters</a>
+      <a href="newsletters.html" class="active">Newsletters</a>
       <a href="clearsky.html">Clear Sky</a>
       <a href="link.html">Links</a>
       <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
@@ -152,12 +156,11 @@
   <div class="content">
     <table width="100%">
       <tr>
-        <td><img src="images/centre_header2.jpg" width="600" border="0" alt="Header"></td>
         <td><h2>Archived Newsletters (1974 - 2024)</h2></td>
       </tr>
     </table>
 
-    <p>Newsletters are in pdf format. You will need the free Acrobat Reader to read them. 
+    <p>Newsletters are in PDF format. You will need the free Acrobat Reader to read them.
     If your web browser doesn't have one built in, you can get one by clicking the Acrobat label below.</p>
 
     <a href="http://www.adobe.com/products/acrobat/readstep.html">
@@ -172,7 +175,6 @@
 
     <br><hr><br>
 
-    <!-- BEGIN NEWSLETTER ARCHIVE (kept intact from your existing HTML) -->
     <p>Archived Newsletters:<br><br>
       <a href="archived_newsletters.html#2024">2024</a>
       <a href="archived_newsletters.html#2023">2023</a>
@@ -213,9 +215,6 @@
       <a href="archived_newsletters.html#1975">1975</a>
       <a href="archived_newsletters.html#1974">1974</a>
     </p>
-
-    <!-- Your existing per-year sections can stay as-is below -->
-    <!-- (To save space, I’ve truncated those here, but you can paste them back in full) -->
   </div>
 
   <script>
