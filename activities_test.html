@@ -35,12 +35,12 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 
   .menu-toggle span {
     margin-left: 8px;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   nav {
@@ -48,18 +48,28 @@
     flex-direction: column;
     background-color: #111;
     text-align: center;
+    padding: 10px 0;
   }
 
   nav a {
     color: white;
     text-decoration: none;
-    padding: 15px;
+    padding: 12px 20px;
+    margin: 5px 10px;
     font-size: 1.3em;
-    border-bottom: 1px solid #333;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 8px;
   }
 
   nav a:hover {
     background-color: #333;
+    transform: scale(1.05);
+  }
+
+  nav a.active {
+    background-color: #333;
+    font-weight: bold;
   }
 
   /* Show menu when active */
@@ -78,11 +88,12 @@
       flex-direction: row;
       justify-content: center;
       background-color: #000;
+      padding: 10px 0;
     }
 
     nav a {
-      border: none;
-      padding: 15px 25px;
+      padding: 14px 25px;
+      margin: 0 8px;
       font-size: 1.1em;
     }
 
@@ -91,11 +102,15 @@
     }
   }
 
-  /* Content area */
+  /* Content area with rounded edges */
   .content {
     background-color: #fff;
     color: #000;
     padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   }
 
   img {
@@ -107,13 +122,11 @@
 
 <body>
 
-
-
 <nav id="navMenu">
   <a href="https://saskatoon.rasc.ca/index.html">Home</a>
   <a href="https://saskatoon.rasc.ca/about_rasc.html">About</a>
   <a href="https://saskatoon.rasc.ca/executive.html">Executive</a>
-  <a href="https://saskatoon.rasc.ca/activities.html">Activities</a>
+  <a href="https://saskatoon.rasc.ca/activities.html" class="active">Activities</a>
   <a href="https://saskatoon.rasc.ca/newsletters.html">Newsletters</a>
   <a href="https://saskatoon.rasc.ca/clearsky.html">Clear Sky</a>
   <a href="https://saskatoon.rasc.ca/link.html">Links</a>
@@ -153,7 +166,6 @@
     Email <a href="mailto:sk_centre@rasc.ca">sk_centre@rasc.ca</a> if you did not receive an email.
   </p>
 
-  <!-- Example content kept -->
   <h1 style="color:red;">2025</h1>
   <h2 style="color:red;">November</h2>
   <p style="color:green;"><b>November 17 - RASC General Meeting - Hybrid: In-person U of S Observatory & Online</b></p>
@@ -164,12 +176,15 @@
   <hr>
   <h2 style="color:red;">December</h2>
   <p style="color:black;">
-    <b>December 13 - Observer's/Imaging Group Night at Sleaford Observatory</b><br>Geminid Meteor Shower
+    <b>December 13 - Observer's/Imaging Group Night at Sleaford Observatory</b><br>
+    Geminid Meteor Shower
   </p>
 
   <hr>
-  <p style="color:green;">For more information see our <a href="https://saskatoon.rasc.ca/newsletters.html">Newsletter</a> or 
-  <a href="mailto:sk_centre@rasc.ca">email us</a>.</p>
+  <p style="color:green;">For more information see our 
+    <a href="https://saskatoon.rasc.ca/newsletters.html">Newsletter</a> 
+    or <a href="mailto:sk_centre@rasc.ca">email us</a>.
+  </p>
 </div>
 
 <script>
@@ -180,5 +195,4 @@
 </script>
 
 </body>
-</html>
 
