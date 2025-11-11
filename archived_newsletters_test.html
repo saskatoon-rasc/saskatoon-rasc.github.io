@@ -5,132 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RASC Saskatoon Centre Newsletters</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <style>
+   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* HEADER AND MENU */
-    header {
+    /* NAVIGATION STYLES */
+    nav {
       background-color: #000;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      border-bottom: 2px solid #444;
       position: sticky;
       top: 0;
       z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
     }
 
     .menu-toggle {
       display: flex;
       align-items: center;
       cursor: pointer;
+      color: #fff;
       font-size: 22px;
-      color: white;
-      background: none;
-      border: none;
     }
 
     .menu-toggle span {
-      margin-left: 8px;
-      font-size: 1.1em;
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
     }
 
-    nav {
+    .nav-links {
       display: none;
       flex-direction: column;
       background-color: #111;
+      width: 100%;
       text-align: center;
-      padding: 10px 0;
     }
 
-    nav a {
-      color: white;
+    .nav-links a {
+      color: #fff;
       text-decoration: none;
-      padding: 8px 15px;
-      margin: 3px 6px;
-      font-size: 1em;
-      display: inline-block;
-      transition: color 0.3s, text-decoration 0.3s;
+      padding: 15px;
+      font-size: 18px;
+      border-top: 1px solid #333;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
+      background-color: #333;
+    }
+
+    .nav-links a.active {
       text-decoration: underline;
-    }
-
-    nav a.active {
       font-weight: bold;
-      text-decoration: underline;
     }
 
-    nav.active {
-      display: flex;
-    }
-
+    /* Desktop layout */
     @media (min-width: 768px) {
       .menu-toggle {
         display: none;
       }
 
-      nav {
+      .nav-links {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        background-color: #000;
-        padding: 8px 0;
+        background: none;
+        width: auto;
       }
 
-      nav a {
-        margin: 0 8px;
-        font-size: 1em;
+      .nav-links a {
+        border: none;
+        margin: 0 10px;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
       }
     }
 
-    /* CONTENT */
+    /* CONTENT STYLING */
     .content {
       background-color: #fff;
       color: #000;
-      padding: 20px;
-      margin: 30px auto;
+      padding: 30px;
       max-width: 900px;
-      border-radius: 25px;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+      margin: 30px auto;
+      box-sizing: border-box;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+                  0 0 40px rgba(0, 0, 0, 0.4);
     }
 
-    h2 {
-      color: #000066;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      color: #000;
+      vertical-align: top;
     }
 
     a {
-      color: #0000cc;
+      color: #0000ee;
     }
 
-    button {
-      background-color: navy;
-      color: white;
-      font-size: 16pt;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-    }
+    @media (max-width: 600px) {
+      .content {
+        padding: 15px;
+        font-size: 16px;
+        margin: 15px;
+      }
 
-    button:hover {
-      background-color: #003399;
-    }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
 
-    hr {
-      border: 1px solid #ccc;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
+      table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+      }
     }
   </style>
 </head>
