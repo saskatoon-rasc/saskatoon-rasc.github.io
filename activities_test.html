@@ -5,148 +5,119 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RASC Activities</title>
 <link rel="icon" href="https://saskatoon.rasc.ca/favicon.ico" type="image/x-icon">
-<style> <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
 
-    /* NAVIGATION STYLES */
-    nav {
-      background-color: #000;
-      border-bottom: 2px solid #444;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+  header {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
 
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
+  header h1 {
+    font-size: 1.5em;
+    margin: 0;
+  }
 
-    .nav-logo img {
-      height: 60px;
-    }
+  /* Hamburger + "Menu" */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.6em;
+  }
 
+  .menu-toggle span {
+    margin-left: 8px;
+    font-size: 1.1em;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 5px 10px;
+    font-size: 1.3em;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 8px;
+  }
+
+  nav a:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+
+  nav a.active {
+    background-color: #333;
+    font-weight: bold;
+  }
+
+  /* Show menu when active */
+  nav.active {
+    display: flex;
+  }
+
+  /* Desktop layout */
+  @media (min-width: 768px) {
     .menu-toggle {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      color: #fff;
-      font-size: 22px;
-    }
-
-    .menu-toggle span {
-      margin-left: 10px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .nav-links {
       display: none;
-      flex-direction: column;
-      background-color: #111;
-      width: 100%;
-      text-align: center;
     }
 
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      padding: 15px;
-      font-size: 18px;
-      border-top: 1px solid #333;
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: #000;
+      padding: 10px 0;
     }
 
-    .nav-links a:hover {
-      background-color: #333;
+    nav a {
+      padding: 14px 25px;
+      margin: 0 8px;
+      font-size: 1.1em;
     }
 
-    @media (min-width: 768px) {
-      .menu-toggle {
-        display: none;
-      }
-
-      .nav-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background: none;
-        width: auto;
-      }
-
-      .nav-links a {
-        border: none;
-        margin: 0 10px;
-      }
-
-      .nav-links a:hover {
-        text-decoration: underline;
-      }
+    nav a:hover {
+      background-color: #222;
     }
+  }
 
-    /* CONTENT STYLING */
-    .content {
-      background-color: #fff;
-      color: #000;
-      padding: 30px;
-      max-width: 900px;
-      margin: 30px auto;
-      box-sizing: border-box;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
-                  0 0 40px rgba(0, 0, 0, 0.4);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s ease-out forwards;
-    }
+  /* Content area with rounded edges */
+  .content {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    td, th {
-      color: #000;
-      vertical-align: top;
-    }
-
-    a {
-      color: #0000ee;
-    }
-
-    @media (max-width: 600px) {
-      .content {
-        padding: 15px;
-        font-size: 16px;
-        margin: 15px;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      table {
-        display: block;
-        overflow-x: auto;
-        width: 100%;
-      }
-    }
-  </style>
-</head>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
 </head>
 
 <body>
