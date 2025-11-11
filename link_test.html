@@ -5,7 +5,6 @@
 <TITLE> Astronomy Links </TITLE>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
   <style>
     body {
       margin: 0;
@@ -154,29 +153,44 @@
       <a href="index.html">Home</a>
       <a href="about_rasc.html">About</a>
       <a href="executive.html">Executive</a>
-      <a href="activities.html" >Activities</a>
+      <a href="activities.html" class="active">Activities</a>
       <a href="newsletters.html">Newsletters</a>
       <a href="clearsky.html">Clear Sky</a>
-      <a href="link.html" class="active">Links</a>
+      <a href="link.html">Links</a>
       <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
       <a href="telescopes.html">Telescopes</a>
     </div>
   </nav>
 
-  
-   <div class="content">
-   
+<div class="content">
+<table border=0 width=100% cellpadding=10 cellspacing=0 height=100%>
+<tr>
+<td width=134 valign=top>
+<table border=0 cellpadding=0 cellspacing=0 valign=top>
+<tr><td><a href="index.html"><img src="menuimages/lt_g3_1s2.jpg" border="0" width="134" height="125"></a></td></tr>
+<tr><td><a href="index.html"onmouseout="button_off('home'); return true" onmouseover="button_on('home'); return true"><img src="menuimages/lt_home_off.jpg" border="0" width="134" height="38" name="home"></a></td></tr>
+<tr><td><a href="about_rasc.html"onmouseout="button_off('about'); return true" onmouseover="button_on('about'); return true"><img src="menuimages/lt_about_off.jpg" border="0" width="134" height="38" name="about"></a></td></tr>
+<tr><td><a href="executive.html"onmouseout="button_off('executive'); return true" onmouseover="button_on('executive'); return true"><img src="menuimages/lt_executive_off.jpg" border="0" width="134" height="38" name="executive"></a></td></tr>
+<tr><td><a href="activities.html"onmouseout="button_off('activities'); return true" onmouseover="button_on('activities'); return true"><img src="menuimages/lt_activities_off.jpg" border="0" width="134" height="38" name="activities"></a></td></tr>
+<tr><td><a href="newsletters.html"onmouseout="button_off('newsletters'); return true" onmouseover="button_on('newsletters'); return true"><img src="menuimages/lt_newsletters_off.jpg" border="0" width="134" height="38" name="newsletters"></a></td></tr>
+<tr><td><a href="clearsky.html"onmouseout="button_off('clearsky'); return true" onmouseover="button_on('clearsky') ; return true"><img src="menuimages/lt_clearsky_off.jpg" border="0" width="134" height="38" name="clearsky"></a></td></tr>
+<tr><td><a href="link.html"onmouseout="button_off('link'); return true" onmouseover="button_on('link'); return true"><img src="menuimages/lt_link_selected.jpg" border="0" width="134" height="38" name="link"></a></td></tr>
+<tr><td><a href="https://sssp.saskatoon.rasc.ca/"onmouseout="button_off('starparty'); return true" onmouseover="button_on('starparty'); return true" target="_blank"><img src="menuimages/lt_starparty_off.jpg" border="0" width="134" height="38" name="starparty"></a></td></tr>
+<tr><td><a href="telescopes.html"onmouseout="button_off('telescopes'); return true" onmouseover="button_on('telescopes'); return true"><img src="menuimages/lt_telescopes_off.jpg" border="0" width="134" height="38" name="telescopes"></a></td>
+</table></td>
+
 <td valign=top bgcolor="FFFFFF"><font face="times">
 
-<table>
-      <tr>
-        <td><img src="images/centre_header2.jpg" width="600" border="0" alt="RASC Header"></td>
-        <td><h2>Links to RASC and Other Astronomy Pages</h2></td>
-      </tr>
-    </table>
+<table width=100%>
+<tr><td>
+<img src="images/centre_header2.jpg" width=600 border=0></td><td>
+<h2>Links to RASC and Other Astronomy Pages</h2>
+</td></tr>
+</table>
+
 <!-- NEW DATA GOES HERE *NOTE: CHANGE THE MENU GRPAHIC FOR THE CORRESPONDING PAGE GROUP TO THE "selected" VERSION INSTEAD OF "on" AND "off" VERSIONS IN THE JAVASCRIPT ABOVE -->
 
-<table><tr valign=top><td>
+<table border rules=all width=100% cellpadding=10><tr valign=top><td>
 
 <h2>Links To Other RASC Centre Web Pages</h2>
 
@@ -340,7 +354,6 @@ Saskatoon, SK &nbsp;S7H 5S8
       navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
     }
   </script>
-
 </body>
 </html>
 
