@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RASC Saskatoon Centre – Telescopes</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* NAVIGATION STYLES */
+    nav {
+      background-color: #000;
+      border-bottom: 2px solid #444;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    .menu-toggle span {
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 15px;
+      font-size: 18px;
+      border-top: 1px solid #333;
+    }
+
+    .nav-links a:hover {
+      background-color: #333;
+    }
+
+    .nav-links a.active {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    /* Desktop layout */
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        width: auto;
+      }
+
+      .nav-links a {
+        border: none;
+        margin: 0 10px;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    /* CONTENT STYLING */
+    .content {
+      background-color: #fff;
+      color: #000;
+      padding: 30px;
+      max-width: 900px;
+      margin: 30px auto;
+      box-sizing: border-box;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+                  0 0 40px rgba(0, 0, 0, 0.4);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      color: #000;
+      vertical-align: top;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: #0000ee;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 15px;
+        font-size: 16px;
+        margin: 15px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Responsive Navigation Menu -->
+  <nav>
+    <div class="nav-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        ☰ <span>Menu</span>
+      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about_rasc.html">About</a>
+      <a href="executive.html">Executive</a>
+      <a href="activities.html">Activities</a>
+      <a href="newsletters.html">Newsletters</a>
+      <a href="clearsky.html">Clear Sky</a>
+      <a href="link.html">Links</a>
+      <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
+      <a href="telescopes.html" class="active">Telescopes</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="content">
+    <table>
+      <tr>
+        <td><img src="images/centre_header2.jpg" width="600" border="0" alt="RASC Header"></td>
+        <td><h2>Telescopes</h2></td>
+      </tr>
+    </table>
+
+    <table border rules="all" width="100%" cellpadding="10">
+      <tr valign="top">
+        <td>
+          <img src="images/meade_lightbridge.gif" align="left" hspace="10" alt="Meade Lightbridge Telescope">
+          <center><h3>Telescope Rental Program</h3></center>
+          <p>The Saskatoon Centre has made its telescopes available for rent to RASC members on a monthly basis. 
+          We have three Sky-Watcher 8-inch Dobsonian telescopes, each with a kit of eyepieces and Antares 8x50 right-angle finder scopes. 
+          We also have one Telrad Reflex Sight.</p>
+          <center><a href="rent.html">Rental Information</a></center>
+        </td>
+        <td>
+          <center><h3>Sleaford Roll-Off Observatory</h3></center>
+          <p><i>Progress and preparation for Skynet, December 21, 2019.</i></p>
+          <p>Daryl Janzen writes: Here are a couple of videos 
+          [<a href="images/inside.mov">outside</a>, <a href="images/outside.mov">inside</a>] 
+          I just took from home of the Sleaford roll-off opening and closing. The PROMPT telescope pier will be where the black stool is sitting 
+          between the closest and next closest telescopes to the cameras.</p>
+
+          <p>Scott and I were out at Sleaford a couple of days this week getting all the control wiring done, 
+          and Kim and I went out again today to sort out some computer issues. 
+          I captured the videos on my phone just now through the Reolink app while running MaxDome through TeamViewer on my laptop.</p>
+
+          <p>I have a few odds and ends to finish setting up on the computer, and we're waiting for the telescope mount 
+          to arrive in ~February to finish off the pier and install the telescope, 
+          but this marks a significant milestone towards setting up the Skynet robotic telescope at Sleaford, 
+          and participating in multi-messenger astronomy at the U of S!</p>
+        </td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <center>
+      <b style="color: blue;">Questions about astronomy, the Saskatoon Centre or membership?</b>
+      <p>Email: <a href="mailto:sk_centre@rasc.ca">sk_centre@rasc.ca</a></p>
+      <p>RASC Inc.<br>PO Box 31086, RPO Broadway<br>Saskatoon, SK S7H 5S8</p>
+    </center>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+
+</body>
+</html>
