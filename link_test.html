@@ -1,137 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Astronomy Links</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RASC Saskatoon Centre – Astronomy Links</title>
+  <link rel="icon" href="https://saskatoon.rasc.ca/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://saskatoon.rasc.ca/favicon.ico" type="image/x-icon">
   <style>
-    /* page basics */
     body {
+      margin: 0;
       background-color: #000;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
     }
 
-    /* top nav */
+    /* NAVIGATION STYLES */
     nav {
-      background-color: #111;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.75rem 1rem;
+      background-color: #000;
+      border-bottom: 2px solid #444;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
     .menu-toggle {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
       cursor: pointer;
       color: #fff;
+      font-size: 22px;
+    }
+
+    .menu-toggle span {
+      margin-left: 10px;
+      font-size: 20px;
       font-weight: bold;
-      font-size: 1rem;
-      user-select: none;
     }
 
-    .menu-icon {
-      display: inline-block;
-      width: 20px;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      box-shadow: 0 6px 0 #fff, 0 12px 0 #fff;
-      transform-origin: center;
-    }
-
-    /* nav links (hidden on mobile by default) */
     .nav-links {
-      display: none;               /* HIDE by default for mobile */
-      gap: 1rem;
-      align-items: center;
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      width: 100%;
+      text-align: center;
     }
 
     .nav-links a {
       color: #fff;
       text-decoration: none;
-      font-size: 1rem;
+      padding: 15px;
+      font-size: 18px;
+      border-top: 1px solid #333;
+    }
+
+    .nav-links a:hover {
+      background-color: #333;
+    }
+
+    .nav-links a.active {
+      text-decoration: underline;
       font-weight: bold;
-      padding: 0.5rem 0.75rem;
-      display: inline-block;
     }
 
-    .nav-links a:hover { color: #00aaff; text-decoration: underline; }
-
-    /* when active (mobile) show vertical column */
-    .nav-links.active {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      background: #111;
-      position: absolute;
-      left: 0;
-      top: 56px; /* below the nav */
-      padding: 0.5rem 0;
-      border-top: 1px solid #222;
-    }
-
-    .nav-links.active a {
-      padding: 0.8rem 1rem;
-      border-bottom: 1px solid #222;
-    }
-
-    /* Desktop layout: show horizontally, hide hamburger */
+    /* Desktop layout */
     @media (min-width: 768px) {
-      .menu-toggle { display: none; }
-      .nav-links {
-        display: flex !important; /* show on desktop */
-        position: static;
-        flex-direction: row;
-        background: none;
-        padding: 0;
+      .menu-toggle {
+        display: none;
       }
-      .nav-links a { padding: 0.5rem 0.75rem; border: none; }
-      .nav-links.active { display: flex; position: static; }
+
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        width: auto;
+      }
+
+      .nav-links a {
+        border: none;
+        margin: 0 10px;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
     }
 
-    /* content wrapper (white with rounded corners) */
-    .content-wrapper {
+    /* CONTENT STYLING */
+    .content {
       background-color: #fff;
       color: #000;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 16px;
+      padding: 30px;
       max-width: 900px;
+      margin: 30px auto;
       box-sizing: border-box;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+                  0 0 40px rgba(0, 0, 0, 0.4);
     }
 
-    h2 { color: #003366; margin-top: 0; }
+    .page-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
 
-    a { color: #003366; }
-    a:hover { text-decoration: underline; }
+    .page-header img {
+      max-width: 250px;
+      height: auto;
+      border-radius: 8px;
+    }
 
-    table { width: 100%; border-collapse: collapse; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
 
-    /* small niceties */
-    hr { border: 1px solid #ccc; }
-    center { margin-top: 1.5rem; }
+    td, th {
+      color: #000;
+      vertical-align: top;
+    }
+
+    a {
+      color: #0000ee;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 15px;
+        font-size: 16px;
+        margin: 15px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- Responsive Navbar (same structure/behavior as activities.html) -->
+  <!-- Responsive Navigation Menu -->
   <nav>
-    <div class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="navLinks">
-      <span class="menu-icon" aria-hidden="true"></span>
-      <span>Menu</span>
+    <div class="nav-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        ☰ <span>Menu</span>
+      </div>
     </div>
-
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="about_rasc.html">About</a>
@@ -139,56 +173,17 @@
       <a href="activities.html">Activities</a>
       <a href="newsletters.html">Newsletters</a>
       <a href="clearsky.html">Clear Sky</a>
-      <!-- current page: visually emphasise -->
-      <a href="link.html" style="color:#00aaff;">Links</a>
-      <a href="https://sssp.saskatoon.rasc.ca/" target="_blank" rel="noopener">Star Party</a>
+      <a href="link.html" class="active">Links</a>
+      <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
       <a href="telescopes.html">Telescopes</a>
     </div>
   </nav>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('active');
-
-      // update aria-expanded on menu-toggle for accessibility
-      const toggle = document.querySelector('.menu-toggle');
-      const expanded = nav.classList.contains('active');
-      toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-    }
-
-    // Close mobile menu when clicking a link (nice UX)
-    document.addEventListener('click', function (e) {
-      const nav = document.getElementById('navLinks');
-      const toggle = document.querySelector('.menu-toggle');
-      if (!nav.contains(e.target) && !toggle.contains(e.target) && nav.classList.contains('active')) {
-        nav.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Optional: close menu on resize to desktop to avoid stuck state
-    window.addEventListener('resize', function () {
-      const nav = document.getElementById('navLinks');
-      if (window.innerWidth >= 768) {
-        nav.classList.remove('active');
-        document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
-      }
-    });
-  </script>
-
-  <!-- content area (keeps all your original links/content) -->
-  <div class="content-wrapper">
-    <table>
-      <tr>
-        <td>
-          <img src="images/centre_header2.jpg" width="600" border="0" alt="Header">
-        </td>
-        <td>
-          <h2>Links to RASC and Other Astronomy Pages</h2>
-        </td>
-      </tr>
-    </table>
+  <div class="content">
+    <div class="page-header">
+      <table><td><img src="images/centre_header2.jpg" alt="RASC Header"></td>
+      <td><h2>Links to RASC and Other Astronomy Pages</h2></td></table>
+    </div>
 
     <h2>Links To Other RASC Centre Web Pages</h2>
     <ol>
@@ -199,7 +194,7 @@
       <li><a href="http://www.rasc.ca/nb">New Brunswick Centre</a></li>
       <li><a href="http://www.rasc.ca/quebec">Québec Centre</a></li>
       <li><a href="http://www.rasc.ca/montreal">Montréal (English) Centre</a></li>
-      <li><a href="http://www.rasc.ca/montrealf">Montréal - La société d'astronomie de Montréal</a></li>
+      <li><a href="http://www.rasc.ca/montrealf">Montréal Société d'astronomie</a></li>
       <li><a href="http://www.rasc.ca/ottawa">Ottawa Centre</a></li>
       <li><a href="http://www.rasc.ca/kingston">Kingston Centre</a></li>
       <li><a href="http://www.rasc.ca/belleville">Belleville Centre</a></li>
@@ -225,53 +220,60 @@
 
     <h2>Web Pages Of RASC Members</h2>
     <ol>
-      <li>Ron Waldron — <a href="https://m.facebook.com/584316595087745/">Living Skies Stargazing</a></li>
-      <li>Tenho Tuomi — <a href="http://www.lex.sk.ca/astro/index.html">Tuomi Observatory</a></li>
-      <li>Tim Yaworski — <a href="https://rascastroimaging.zenfolio.com/p216037123">RASC Astroimaging Wide Field certificate</a></li>
-      <li>Rick Huziak’s <a href="https://saskatoon.rasc.ca/The_Great_Canadian_Observing_Challenge.html">Great Canadian Observing Challenge</a></li>
-      <li>Rick Huziak’s <a href="https://saskatoon.rasc.ca/Geosyncs.html">Geosynchronous Satellite Page</a></li>
-      <li>Great astrophotos by our members — <a href="https://saskatoon.rasc.ca/photos.html">Saskatoon Centre Astrophoto</a></li>
+      <li>Ron Waldron – <a href="https://m.facebook.com/584316595087745/">Living Skies Stargazing</a></li>
+      <li>Tenho Tuomi – <a href="http://www.lex.sk.ca/astro/index.html">Tuomi Observatory</a></li>
+      <li>Tim Yaworski – <a href="https://rascastroimaging.zenfolio.com/p216037123">RASC Astroimaging Certificate</a></li>
+      <li>Rick Huziak – <a href="https://saskatoon.rasc.ca/The_Great_Canadian_Observing_Challenge.html">The Great Canadian Observing Challenge</a></li>
+      <li>Rick Huziak – <a href="https://saskatoon.rasc.ca/Geosyncs.html">Geosynchronous Satellite Page</a></li>
+      <li><a href="https://saskatoon.rasc.ca/photos.html">Saskatoon Centre Astrophoto Page</a></li>
       <li><a href="https://news.usask.ca/articles/community/2024/remembering-gordon-patterson-from-pow-to-the-university-of-saskatchewan.php">Remembering Gordon Patterson</a></li>
+      <li><a href="https://rascastroimaging.zenfolio.com/">RASC Astroimaging Gallery</a></li>
+      <li><a href="http://www.astrofoto.ca/">Astrofoto.ca – Canada’s Astrophotographers</a></li>
+      <li><a href="http://www.astrobuysell.com/paul">Paul Markov – Toronto</a></li>
     </ol>
-
-    <hr />
 
     <h2>NASA Web Sites</h2>
     <ol>
-      <li><a href="http://www.jpl.nasa.gov/galileo/">The GALILEO probe (JPL)</a></li>
+      <li><a href="http://www.jpl.nasa.gov/galileo/">The Galileo Probe (JPL)</a></li>
       <li><a href="http://www.jpl.nasa.gov">Jet Propulsion Laboratory</a></li>
       <li><a href="http://nssdc.gsfc.nasa.gov/">National Space Science Data Center</a></li>
-      <li><a href="http://stdatu.stsci.edu/dss/">The STSci Digitized Sky Survey</a></li>
+      <li><a href="http://stdatu.stsci.edu/dss/">STSci Digitized Sky Survey</a></li>
       <li><a href="http://www.unitedspacealliance.com">Space Flight Operations for NASA</a></li>
     </ol>
 
     <h2>Magazines</h2>
     <ol>
-      <li><a href="http://www.theastronomer.org/">The Astronomer magazine</a></li>
-      <li><a href="http://skyandtelescope.com/">Sky and Telescope</a></li>
+      <li><a href="http://www.theastronomer.org/">The Astronomer</a></li>
+      <li><a href="http://skyandtelescope.com/">Sky & Telescope</a></li>
     </ol>
 
-    <p><a href="http://antwrp.gsfc.nasa.gov/apod/astropix.html">Astronomy Picture of the Day</a>: VERY COOL!</p>
-    <p>A <a href="http://cleardarksky.com/c/Saskatoonkey.html">Clear Sky Clock</a> — check it out; thanks to Attilla Danko.</p>
+    <p><a href="http://antwrp.gsfc.nasa.gov/apod/astropix.html">Astronomy Picture of the Day</a></p>
+    <p><a href="http://cleardarksky.com/c/Saskatoonkey.html">Clear Sky Clock</a></p>
 
     <h2>Miscellaneous Web Sites</h2>
     <ol>
-      <li><a href="https://findstarlink.com/">Starlink visibility</a></li>
+      <li><a href="https://findstarlink.com/">Starlink Visibility</a></li>
       <li><a href="http://www.astro.indiana.edu/">Indiana University Astronomy Department</a></li>
-      <li><a href="http://www.galaxyphoto.com/">Jason Ware's Astrophotographs</a></li>
+      <li><a href="http://www.galaxyphoto.com/">Jason Ware’s Astrophotographs</a></li>
       <li><a href="https://www.seti.org/">SETI Institute</a></li>
       <li><a href="http://www.universetoday.com">Universe Today</a></li>
-      <li><a href="http://www.sky-watch.com">SkyWatch — Your Astronomical Alarm Clock</a></li>
+      <li><a href="http://www.sky-watch.com">SkyWatch – Your Astronomical Alarm Clock</a></li>
     </ol>
 
-    <hr />
-
+    <hr>
     <center>
-      <b><span style="color:blue;">Questions about astronomy, the Saskatoon Centre or membership?</span></b>
+      <b style="color: blue;">Questions about astronomy, the Saskatoon Centre or membership?</b>
       <p>Email: <a href="mailto:sk_centre@rasc.ca">sk_centre@rasc.ca</a></p>
-      <p>RASC Inc.<br>PO Box 31086, RPO Broadway<br>Saskatoon, SK &nbsp;S7H 5S8</p>
+      <p>RASC Inc.<br>PO Box 31086, RPO Broadway<br>Saskatoon, SK S7H 5S8</p>
     </center>
   </div>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+
 </body>
 </html>
-
