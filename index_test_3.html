@@ -1,238 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RASC - Saskatoon Centre</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-    }
 
-    header {
-      padding: 1rem;
-    }
 
-    header h1 {
-      font-size: 2rem;
-      margin: 0.5rem 0;
-    }
+footer {
+font-size: 0.9rem;
+color: #ccc;
+margin-top: 2rem;
+padding: 1rem;
+border-top: 1px solid #333;
+}
 
-    /* --- Navigation Bar --- */
-    nav {
-      background-color: #111;
-      border-top: 1px solid #333;
-      border-bottom: 1px solid #333;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
 
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem 1rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+footer a {
+color: #4da6ff;
+text-decoration: none;
+}
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-    }
 
-    .nav-links a {
-      color: #fff;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: color 0.2s ease, transform 0.2s ease;
-    }
+footer a:hover {
+text-decoration: underline;
+}
 
-    .nav-links a:hover {
-      color: #4da6ff;
-      transform: scale(1.05);
-    }
 
-    /* --- Hamburger and Menu Label --- */
-    .hamburger-container {
-      display: none;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-    }
+@media (max-width: 600px) {
+header h1 {
+font-size: 1.6rem;
+}
 
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      width: 30px;
-      height: 25px;
-    }
 
-    .hamburger div {
-      height: 3px;
-      width: 100%;
-      background-color: #fff;
-      transition: all 0.3s ease;
-    }
-
-    .menu-label {
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: bold;
-      letter-spacing: 0.05em;
-      user-select: none;
-    }
-
-    /* Hamburger animation to “X” */
-    .hamburger.open div:nth-child(1) {
-      transform: rotate(45deg) translate(6px, 6px);
-    }
-    .hamburger.open div:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.open div:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    /* --- Collapsible Menu (Mobile) --- */
-    @media (max-width: 768px) {
-      .hamburger-container {
-        display: flex;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        background-color: #111;
-        border-top: 1px solid #333;
-
-        /* Hidden by default */
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-      }
-
-      .nav-links.show {
-        max-height: 400px; /* enough to reveal all links */
-        opacity: 1;
-      }
-
-      .nav-links a {
-        font-size: 1.1rem;
-      }
-    }
-
-    main {
-      padding: 1.5rem;
-    }
-
-    .main-image img {
-      max-width: 90vw;
-      height: auto;
-      border: none;
-      border-radius: 10px;
-    }
-
-    footer {
-      font-size: 0.9rem;
-      color: #ccc;
-      margin-top: 2rem;
-      padding: 1rem;
-      border-top: 1px solid #333;
-    }
-
-    footer a {
-      color: #4da6ff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.6rem;
-      }
-
-      .main-image img {
-        max-width: 100%;
-      }
-    }
-  </style>
+.main-image img {
+max-width: 100%;
+}
+}
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>RASC - Saskatoon Centre</h1>
-  </header>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="nav-container">
-      <div class="hamburger-container" id="hamburger-container">
-        <div class="hamburger" id="hamburger">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <span class="menu-label">Menu</span>
-      </div>
+<header>
+<h1>RASC - Saskatoon Centre</h1>
+</header>
 
-      <div class="nav-links" id="nav-links">
-        <a href="about_rasc.html">About RASC</a>
-        <a href="executive.html">Executive</a>
-        <a href="activities.html">Activities</a>
-        <a href="newsletters.html">Newsletters</a>
-        <a href="clearsky.html">Clear Sky</a>
-        <a href="link.html">Links</a>
-        <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
-        <a href="telescopes.html">Telescopes</a>
-      </div>
-    </div>
-  </nav>
 
-  <main>
-    <div class="main-image">
-      <a href="about_rasc.html">
-        <img src="images/home4.jpg" alt="RASC Home">
-      </a>
-    </div>
-  </main>
+<!-- Navigation Bar -->
+<nav>
+<div class="nav-container">
+<div class="menu-toggle" onclick="toggleMenu()">
+☰ <span>Menu</span>
+</div>
+</div>
+<div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="about_rasc.html">About</a>
+<a href="executive.html">Executive</a>
+<a href="activities.html">Activities</a>
+<a href="newsletters.html">Newsletters</a>
+<a href="clearsky.html">Clear Sky</a>
+<a href="link.html">Links</a>
+<a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
+<a href="telescopes.html">Telescopes</a>
+</div>
+</nav>
 
-  <footer>
-    <p>
-      Website maintained by
-      <a href="mailto:ttuomi@sasktel.net?subject=RASC Saskatoon Centre Web Site">Tenho Tuomi</a>
-    </p>
-    <p><i>Hubble Telescope image of NGC 4414 courtesy of the Space Telescope Science Institute</i></p>
-  </footer>
 
-  <script>
-    // Mobile menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    const hamburgerContainer = document.getElementById('hamburger-container');
+<main>
+<div class="main-image">
+<a href="about_rasc.html">
+<img src="images/home4.jpg" alt="RASC Home">
+</a>
+</div>
+</main>
 
-    hamburgerContainer.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-      hamburger.classList.toggle('open');
-    });
-  </script>
+
+<footer>
+<p>
+Website maintained by
+<a href="mailto:ttuomi@sasktel.net?subject=RASC Saskatoon Centre Web Site">Tenho Tuomi</a>
+</p>
+<p><i>Hubble Telescope image of NGC 4414 courtesy of the Space Telescope Science Institute</i></p>
+</footer>
+
+
+<script>
+function toggleMenu() {
+const navLinks = document.getElementById('navLinks');
+navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
+
 
 </body>
 </html>
