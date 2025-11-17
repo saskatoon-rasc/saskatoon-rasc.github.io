@@ -23,11 +23,10 @@
       margin: 0.5rem 0;
     }
 
-    /* --- Navigation Bar --- */
+    /* NAVIGATION STYLES (matches Executive page) */
     nav {
-      background-color: #111;
-      border-top: 1px solid #333;
-      border-bottom: 1px solid #333;
+      background-color: #000;
+      border-bottom: 2px solid #444;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -37,102 +36,70 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.8rem 1rem;
-      max-width: 1000px;
-      margin: 0 auto;
+      padding: 10px 20px;
+    }
+
+    /* optional logo area (kept commented out) */
+    .nav-logo img {
+      height: 60px;
+    }
+
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    .menu-toggle span {
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
     }
 
     .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      width: 100%;
+      text-align: center;
     }
 
     .nav-links a {
       color: #fff;
-      font-size: 1.2rem;
-      font-weight: bold;
       text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: color 0.2s ease, transform 0.2s ease;
+      padding: 15px;
+      font-size: 18px;
+      border-top: 1px solid #333;
+      display: block;
     }
 
     .nav-links a:hover {
-      color: #4da6ff;
-      transform: scale(1.05);
+      background-color: #333;
     }
 
-    /* --- Hamburger and Menu Label --- */
-    .hamburger-container {
-      display: none;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-    }
-
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      width: 30px;
-      height: 25px;
-    }
-
-    .hamburger div {
-      height: 3px;
-      width: 100%;
-      background-color: #fff;
-      transition: all 0.3s ease;
-    }
-
-    .menu-label {
-      color: #fff;
-      font-size: 1.1rem;
-      font-weight: bold;
-      letter-spacing: 0.05em;
-      user-select: none;
-    }
-
-    /* Hamburger animation to “X” */
-    .hamburger.open div:nth-child(1) {
-      transform: rotate(45deg) translate(6px, 6px);
-    }
-    .hamburger.open div:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.open div:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -6px);
-    }
-
-    /* --- Collapsible Menu (Mobile) --- */
-    @media (max-width: 768px) {
-      .hamburger-container {
-        display: flex;
+    /* Desktop layout (matches Executive) */
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
       }
 
       .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        background-color: #111;
-        border-top: 1px solid #333;
-
-        /* Hidden by default */
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-      }
-
-      .nav-links.show {
-        max-height: 400px; /* enough to reveal all links */
-        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        width: auto;
       }
 
       .nav-links a {
-        font-size: 1.1rem;
+        border: none;
+        margin: 0 10px;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
       }
     }
 
@@ -181,28 +148,26 @@
     <h1>RASC - Saskatoon Centre</h1>
   </header>
 
-  <!-- Navigation Bar -->
+  <!-- Navigation (exact structure & behaviour as Executive page) -->
   <nav>
     <div class="nav-container">
-      <div class="hamburger-container" id="hamburger-container">
-        <div class="hamburger" id="hamburger">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <span class="menu-label">Menu</span>
+      <!--<div class="nav-logo">
+        <a href="index.html"><img src="menuimages/lt_g3_1s2.jpg" alt="RASC Saskatoon Logo"></a>
+      </div>-->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        ☰ <span>Menu</span>
       </div>
-
-      <div class="nav-links" id="nav-links">
-        <a href="about_rasc.html">About RASC</a>
-        <a href="executive.html">Executive</a>
-        <a href="activities.html">Activities</a>
-        <a href="newsletters.html">Newsletters</a>
-        <a href="clearsky.html">Clear Sky</a>
-        <a href="link.html">Links</a>
-        <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
-        <a href="telescopes.html">Telescopes</a>
-      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about_rasc.html">About</a>
+      <a href="executive.html">Executive</a>
+      <a href="activities.html">Activities</a>
+      <a href="newsletters.html">Newsletters</a>
+      <a href="clearsky.html">Clear Sky</a>
+      <a href="link.html">Links</a>
+      <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
+      <a href="telescopes.html">Telescopes</a>
     </div>
   </nav>
 
@@ -223,15 +188,35 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    const hamburgerContainer = document.getElementById('hamburger-container');
+    // toggle exactly as in Executive page:
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      // when mobile: navLinks is hidden by default (display !== 'flex')
+      navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
+    }
 
-    hamburgerContainer.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-      hamburger.classList.toggle('open');
+    // Ensure correct initial state if user resizes after interaction:
+    window.addEventListener('resize', () => {
+      const navLinks = document.getElementById('navLinks');
+      if (window.innerWidth >= 768) {
+        navLinks.style.display = 'flex';
+      } else {
+        // don't override user's manual open/close if they used the toggle;
+        // but if it's the initial load, ensure it's hidden on small screens:
+        if (!navLinks.dataset.toggled) navLinks.style.display = 'none';
+      }
     });
+
+    // Mark dataset.toggled when user clicks so resize handler doesn't clobber preference:
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.dataset.toggled = '1';
+    });
+
+    // set initial desktop state (in case loaded on wide screen)
+    if (window.innerWidth >= 768) {
+      document.getElementById('navLinks').style.display = 'flex';
+    }
   </script>
 
 </body>
