@@ -1,330 +1,251 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=windows-1252">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> RASC Activities </title>
-<link rel="icon" href="https://saskatoon.rasc.ca/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="https://saskatoon.rasc.ca/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RASC Saskatoon Centre – Activities</title>
+  <link rel="icon" href="https://saskatoon.rasc.ca/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://saskatoon.rasc.ca/favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* NAVIGATION STYLES */
+    nav {
+      background-color: #000;
+      border-bottom: 2px solid #444;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    .menu-toggle span {
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 15px;
+      font-size: 18px;
+      border-top: 1px solid #333;
+    }
+
+    .nav-links a:hover {
+      background-color: #333;
+    }
+
+    .nav-links a.active {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    /* Desktop layout */
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        width: auto;
+      }
+
+      .nav-links a {
+        border: none;
+        margin: 0 10px;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    /* CONTENT STYLING */
+    .content {
+      background-color: #fff;
+      color: #000;
+      padding: 30px;
+      max-width: 900px;
+      margin: 30px auto;
+      box-sizing: border-box;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+                  0 0 40px rgba(0, 0, 0, 0.4);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      color: #000;
+      vertical-align: top;
+    }
+
+    a {
+      color: #0000ee;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 15px;
+        font-size: 16px;
+        margin: 15px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
-
-
-<body bgcolor="000000">
-
-<script language="JavaScript"><!--
-
-browserName = navigator.appName;
-
-browserVer = parseInt ( navigator.appVersion );
-
-
-
-version = "n2";
-
-if ( browserName == "Netscape" && browserVer >= 3 ) version = "n3";
-
-if ( browserName == "Microsoft Internet Explorer" && browserVer >=4 ) version = "e4";
-
-
-
-if ( version == "n3" || version == "e4" )
-
-{
-
-		home_on = new Image ( 134, 38 );
-		home_on.src = "menuimages/lt_home_on.jpg";
-	    about_on = new Image ( 134, 38 );
-		about_on.src = "menuimages/lt_about_on.jpg";
-		executive_on = new Image ( 134, 38 );
-		executive_on.src = "menuimages/lt_executive_on.jpg";
-		activities_on = new Image ( 134, 38 );
-		activities_on.src = "menuimages/lt_activities_selected.jpg";
-		newsletters_on = new Image ( 134, 38 );
-		newsletters_on.src = "menuimages/lt_newsletters_on.jpg";
-		clearsky_on = new Image ( 134, 38 );
-		clearsky_on.src = "menuimages/lt_clearsky_on.jpg";
-		link_on = new Image ( 134, 38 );
-		link_on.src = "menuimages/lt_link_on.jpg";
-		starparty_on = new Image ( 134, 38 );
-		starparty_on.src = "menuimages/lt_starparty_on.jpg";
-		telescopes_on = new Image ( 134, 38 );
-		telescopes_on.src = "menuimages/lt_telescopes_on.jpg";
-
-		home_off = new Image ( 134, 38 );
-		home_off.src = "menuimages/lt_home_off.jpg";
-		about_off = new Image ( 134, 38 );
-		about_off.src = "menuimages/lt_about_off.jpg";
-		executive_off = new Image ( 134, 38 );
-		executive_off.src = "menuimages/lt_executive_off.jpg";
-		activities_off = new Image ( 134, 38 );
-		activities_off.src = "menuimages/lt_activities_selected.jpg";
-		newsletters_off = new Image ( 134, 38 );
-		newsletters_off.src = "menuimages/lt_newsletters_off.jpg";
-		clearsky_off = new Image ( 134, 38 );
-		clearsky_off.src = "menuimages/lt_clearsky_off.jpg";
-		link_off = new Image ( 134, 38 );
-		link_off.src = "menuimages/lt_link_off.jpg";
-		starparty_off = new Image ( 134, 38 );
-		starparty_off.src = "menuimages/lt_starparty_off.jpg";
-		telescopes_off = new Image ( 134, 38 );
-		telescopes_off.src = "menuimages/lt_telescopes_off.jpg";
-
-
-
-
-
-
-}
-
-
-
-function button_on ( imgName )
-
-{
-
-        if ( version == "n3" || version == "e4" )
-
-        {
-
-                butOn = eval ( imgName + "_on.src" );
-
-                document [imgName].src = butOn;
-
-        }
-
-}
-
-
-
-function button_off ( imgName )
-
-{
-
-        if ( version == "n3" || version == "e4" )
-
-        {
-
-                butOff = eval ( imgName + "_off.src" );
-
-                document [imgName].src = butOff;
-
-        }
-
-}
-
-// --></script>
-
-
-<table width="100%" height="100%" cellspacing="0" cellpadding="10" border="0">
-<tbody><tr>
-<td width=134 valign="top">
-<table valign="top" cellspacing="0" cellpadding="0" border="0">
-<tbody><tr><td><a href="https://saskatoon.rasc.ca/index.html"><img src="menuimages/lt_g3_1s2.jpg" width="134" height="125" border="0"></a></td></tr>
-<tr><td><a href="https://saskatoon.rasc.ca/index.html" onmouseout="button_off('home'); return true" onmouseover="button_on('home'); return true"><img src="menuimages/lt_home_off.jpg" name="home" width="134" height="38" border="0"></a></td></tr>
-<tr><td><a href="https://saskatoon.rasc.ca/about_rasc.html" onmouseout="button_off('about'); return true" onmouseover="button_on('about'); return true"><img src="menuimages/lt_about_off.jpg" name="about" width="134" height="38" border="0"></a></td></tr>
-<tr><td><a href="https://saskatoon.rasc.ca/executive.html" onmouseout="button_off('executive'); return true" onmouseover="button_on('executive'); return true"><img src="menuimages/lt_executive_off.jpg" name="executive" width="134" height="38" border="0"></a></td></tr>
-<tr><td><a href="https://saskatoon.rasc.ca/activities.html" onmouseout="button_off('activities'); return true" onmouseover="button_on('activities'); return true"><img src="menuimages/lt_activities_selected.jpg" name="activities" width="134" height="38" border="0"></a></td></tr>
-<tr><td><a href="https://saskatoon.rasc.ca/newsletters.html" onmouseout="button_off('newsletters'); return true" onmouseover="button_on('newsletters'); return true"><img src="menuimages/lt_newsletters_off.jpg" name="newsletters" width="134" height="38" border="0"></a></td></tr>
-<tr><td><a href="https://saskatoon.rasc.ca/clearsky.html" onmouseout="button_off('clearsky'); return true" onmouseover="button_on('clearsky') ; return true"><img src="https://saskatoon.rasc.ca/menuimages/lt_clearsky_off.jpg" name="clearsky" width="134" height="38" border="0"></a></td></tr>
-<tr><td><a href="https://saskatoon.rasc.ca/link.html" onmouseout="button_off('link'); return true" onmouseover="button_on('link'); return true"><img src="menuimages/lt_link_off.jpg" name="link" width="134" height="38" border="0"></a></td></tr>
-<tr><td><a href="https://sssp.saskatoon.rasc.ca/" onmouseout="button_off('starparty'); return true" onmouseover="button_on('starparty'); return true" target="_blank"><img src="menuimages/lt_starparty_off.jpg" name="starparty" width="134" height="38" border="0"></a></td></tr>
-<tr><td><a href="https://saskatoon.rasc.ca/telescopes.html" onmouseout="button_off('telescopes'); return true" onmouseover="button_on('telescopes'); return true"><img src="menuimages/lt_telescopes_off.jpg" name="telescopes" width="134" height="38" border="0"></a></td>
-</tr></tbody></table></td>
-
-<td valign="top" bgcolor="FFFFFF"><font face="times">
-
-<table width=100%>
-<tr><td>
-<img src="images/centre_header2.jpg" width=600 border=0></td><td>
-<h2>Public & Media Events</h2>
-</td></tr>
-</table>
-
-<!-- NEW DATA GOES HERE *NOTE: CHANGE THE MENU GRPAHIC FOR THE CORRESPONDING PAGE GROUP TO THE "selected" VERSION INSTEAD OF "on" AND "off" VERSIONS IN THE JAVASCRIPT ABOVE -->
-
-<!--<center><img src="images/2021-10-11.jpg"><br>
-November 4, 2021 during an Aurora storm by Ron Waldron. Canon SLR camera ISO 800, 10 sec exp.
-</center><br>-->
-
-<font face="times"><b>All events are <i>free of charge</i> and open to the general public <i>unless otherwise noted</i></b>
-   </font><div style="text-indent: 2em;"><font face="times" color="green">
-   <b>Public events are in green text.</b><br></font></div>
-   <div style="text-indent: 2em;"><font color="black">
-   <b><i>Centre member-only</i></b> events are shown black text.<br></font></div>
-   <div style="text-indent: 2em;"><font color="purple">
-   <b>Selected astronomical events of interest are in purple text.</b> Organized club or public events are not necessarily planned for these events.<br></font></div><p></p>
-
-
-<p><font face="times" color="red">
-<b> INSTRUCTIONS FOR JOINING EXECUTIVE or GENERAL MEETINGS by ZOOM</b></font></p><font face="times" color="black">
-
-Download the ZOOM app onto your computer or device (if you haven't already.)
-<p>An email will be sent to you with the meeting link information for your computer or phone. Check the newsletter monthy
-for last minute changes in the link or event scheduling.
-Email <a href="mailto:sk_centre@rasc.ca?subject=Request to join online meeting">sk_centre@rasc.ca</a>
-if you did not receive an email and wish to join the meeting.</p></font>
-
-<p></p><h1><font face="times" color="red">2025</font></h1><p></p>
-
-<p><h0><font face="times"><font color="red"><b>NOVEMBER</b></font></font></h0></p><font face="times"><font face="times">
-
-<p><font face="times" color="green">
-<b>November 17 - RASC General Meeting - Hybrid: In-person U of S Observatory & On-line</b></font>
-   <div style="text-indent: 2em;"><font color="black">
-   7:00 pm - <b>Executive Meeting</b></font></div>
-   <div style="text-indent: 2em;"><font color="green">
-   8:00 pm - <b>Sharing / Networking</b><br></font></div>
-   <div style="text-indent: 2em;"><font color="green">
-   8:15 pm - <b>Main Program</b><br></font></div>
-   <div style="text-indent: 4em;"><font color="green">
-   <i><b>What's Up This Month?</b></i> - Colin Chatfield.</font></div>
-   <div style="text-indent: 4em;"><font color="green">
-   <i><b>Light, the Universe, and (Almost) Everything</b></i> - Les Dickson - 
-Once-over-lightly introduction to spectroscopy as it pertains to astronomy and how it is relevant to amateur astronomers.</div>
-</p>
-
-<p><font face="times" font color="black">
-<b>November 22 - Observer's/Imaging Group Night at the Sleaford Observatory</b></font></p>
-
-<p><h0><font face="times"><font color="red"><b>DECEMBER</b></font></font></h0></p><font face="times"><font face="times">
-
-<p><font face="times" font color="black">
-<b>December 13 - Observer's/Imaging Group Night at the Sleaford Observatory</b><br>
-Geminid Meteor Shower</font></p>
-
-<hr>
-
-<p></p><h1><font face="times" color="red">2044</font></h1></font><p></p>
-
-<p><h0><font face="times" color="red"><b>AUGUST</b></font></h0></p>
-
-<p><font face="times" color="green">
-<b>August 17 - 22 or August 22 - 28 - Saskatchewan Summer Star Party 2044</b> - 47th Annual SSSP at Cypress Hills Provincial Park.  Program TBD.  Stay tuned! </font></p>
-
-<p><font face="times" color="green">
-<b>August 22 - Total Eclipse of the Sun</b> - Visible from the Saskatchewan Summer Star Party. SSSP'44 is on the Centre Line. 
-</fort></p>
-<hr>
-
-<p></p><h1><font color="green" face="times">For More Information on Events &amp; the RASC:</font></h1><p><font color="green"><font color="green">
-
-</font></font></p><p><font color="green"><font face="times">See our <a href="https://saskatoon.rasc.ca/newsletters.html">Newsletter</a></font>
-<font color="green"><font face="times">
-or <a href="mailto:sk_centre@rasc.ca">email us</a>.</font></font></font></p><p><font color="green"><font color="green"><font color="green">
-
-For information specifically on Saskatchewan Summer Star Party (SSSP), <a href="mailto:sssp.sk@sasktel.net">email us</a>.</font></font></font></p><p><font color="green"><font color="green"><font color="green"><font face="times">
-
-Or see <a href="https://sssp.saskatoon.rasc.ca/">Starparty homepage</a>.</font></font></font></font></p><p><font color="green"><font color="green"><font color="green"><font color="green"><font face="times">
-
-Click <a href="http://www.rasc.ca/join/">here</a> to join the Saskatoon Centre.</font></font></font></font></font></p><p><font color="green"><font color="green"><font color="green"><font color="green"><font face="times">
-
-
-Something wrong on this page?  Email the <a href="mailto:ttuomi@sasktel.net">Web Content Editor.</a></font></font></font></font></font></p><p><font color="green"><font color="green"><font color="green"><font color="green"><font face="times">
-
-<hr>
-
-</font></font></font></font></font></p><h3><font color="green"><font color="green"><font color="green"><font color="green"><font face="times"><font size="4">
-Sleaford Observatory</font></font></font></font></font></font></h3><font color="green"><font color="green"><font color="green"><font face="times"><font color="green"><font face="times">
-
-<p>One of the benefits of membership with our Centre is access to our
-remote viewing site at <a href="https://saskatoon.rasc.ca/sleaford.html">Sleaford</a>. For members who would like more information on Sleaford, please contact <a href="mailto:novachat@sasktel.net">Darrell Chatfield</a> and request a current copy of The Sleaford Observatory Users Manual.
-
-</p><ul>
-<!--<li> <a href="https://saskatoon.rasc.ca/TheSleafordObservatoryUsersManualV4.pdf">The Sleaford Observatory Users Manual</a>
-</li><li> <a href="https://saskatoon.rasc.ca/Meade16LX200Classic_manual.pdf">Manual for our Meade 16 inch telescope</a>-->
-</li></ul> 
-
-
-<hr>
-
-<!--<p></p><h3><font size="4">Light Pollution Abatement Committee</font></h3>
-
-<p>
-We are fighting light pollution! The Saskatchewan Light Pollution Abatement Committee
-is a collaboration between the Saskatoon and Regina RASC Centres and a number of other
-key people in the province. See: <a href="http://http//myotherlife.net/slpac/">Light Pollution in Saskatchewan</a>.</p>-->
-
-
-
-<h3><font size="4">Observing/Imaging Group</font></h3>
-<p>The RASC Saskatoon Centre has an active Observing/Imaging Group. Contact the <a href="mailto:spacerocksandstardust@gmail.com">Observing/Imaging 
-Group Coordinator</a> 
-for details of the group's activities.</p>
-
-<hr>
-
-<h3><font size="4">Observing Aids</font></h3>
-</p><ul>
-   <li><a href="https://saskatoon.rasc.ca/Chatfield_Binocular_List.pdf">Chatfield Binocular Challenge List</a><br>
-      You can earn you binocular certificate by observing 35 of the 40 
-objects on this list, created by Darrell Chatfield.  Once you have 
-started, register with the newsletter editor, Colin Chatfield, to get your 
-name added to the challenge list in the Saskatoon Skies newsletter. 
-</li><p>
-
-   <li><a href="https://saskatoon.rasc.ca/Chatfield_Binocular_List_Expanded.pdf">The Chatfield Binocular Challenge List - Expanded Version</a><br>
-      This is a description of the Chatfield Binocular List fields that goes beyond just the basic objects. Since you've taken time to 
-find the Chatfield Objects, you might as well hang around a bit and explore whatelse is visible within the binocular
- field of view.  The expanded list was produced by Rick Huziak during his run at the challenge. 
-</li></ul>
-
-<hr>
-
-<h3><font size="4">
-National RASC Activities</font></h3>
-
-<p>The Royal Astronomical Society of Canada has many <a href="http://www.rasc.ca/">activities nationwide</a>.</p>
-
-<hr>
-
-<h3><font size="4">
-RASC Membership Activities</font></h3>
-
-RASC member contributions to astronomy:
-
-<ol>
-
-
-<li>
-
-<a href="http://www.petriew.ca/CometPetriew/Discovery.htm"><font color="red">SASKATCHEWAN AMATEUR ASTRONOMER DISCOVERS COMET!</font></a> <font color="blue">Comet
-Petriew!</font> Congratulations to Regina astronomer Vance Petriew who
-discovered the comet at the 2001 Saskatchewan Summer Star Party!
-<p>
-
-</p></li><li>
-<b>CHANT MEDAL</b>.
-In 2001, <a href="http://en.wikipedia.org/wiki/Richard_Huziak">
-Rick Huziak</a> received the prestigious <a href="https://rasc.ca/chant-medal"> Chant Medal</a>. Congratulations Rick! We are
-very proud of your accomplishments in amateur astronomy and are very
-lucky to have you around. Rick is also the recipient of the 
-<a href="http://www.aavso.org/directors-award">AAVSO
-Director's Award</a>, presented to him at the 92nd AAVSO Tuscon Conference.<p>
-
-</li></ol>
-
-<hr>
-<center><br>
-
-<b><font color="blue">Questions about astronomy, the Saskatoon Centre or membership?</font></b><p>
-
-<b>E-mail: <a href="mailto:sk_centre@rasc.ca">sk_centre@rasc.ca</a><p>
-
-Snail-mail: RASC Inc.<br>
-PO Box 31086, RPO Broadway<br>
-Saskatoon, SK &nbsp;S7H 5S8
-
-</b></center>
-
-
-
-<!-- AND NEW DATA ENDS HERE --> 
-
-</font>
-</tr></tbody></table><p></p>
-
-<p></p>
-
-</body></html>
-
-
+<body>
+
+  <!-- Responsive Navigation Menu -->
+  <nav>
+    <div class="nav-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        ☰ <span>Menu</span>
+      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about_rasc.html">About</a>
+      <a href="executive.html">Executive</a>
+      <a href="activities.html" class="active">Activities</a>
+      <a href="newsletters.html">Newsletters</a>
+      <a href="clearsky.html">Clear Sky</a>
+      <a href="link.html">Links</a>
+      <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
+      <a href="telescopes.html">Telescopes</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <table>
+      <tr>
+        <td><img src="images/centre_header2.jpg" width="600" border="0" alt="RASC Header"></td>
+        <td><h2>Public & Media Events</h2></td>
+      </tr>
+    </table>
+
+    <p><b>All events are <i>free of charge</i> and open to the general public <i>unless otherwise noted</i>.</b></p>
+
+    <p style="color: green;"><b>Public events are in green text.</b></p>
+    <p><b><i>Centre member-only</i></b> events are shown in black text.</p>
+    <p style="color: purple;"><b>Selected astronomical events of interest are in purple text.</b></p>
+
+    <h1 style="color: red;">2025</h1>
+    <h2 style="color: red;">November</h2>
+
+    <p style="color: green;">
+      <b>November 17 - RASC General Meeting - Hybrid: In-person U of S Observatory & Online</b><br>
+      <span style="color: black; margin-left: 2em;">7:00 pm - <b>Executive Meeting</b></span><br>
+      <span style="color: green; margin-left: 2em;">8:00 pm - <b>Sharing / Networking</b></span><br>
+      <span style="color: green; margin-left: 2em;">8:15 pm - <b>Main Program</b></span><br>
+      <span style="color: green; margin-left: 4em;"><i><b>What's Up This Month?</b></i> - Colin Chatfield</span><br>
+      <span style="color: green; margin-left: 4em;"><i><b>Light, the Universe, and (Almost) Everything</b></i> - Les Dickson</span><br>
+      <span style="margin-left: 4em;">An introduction to spectroscopy and its relevance to amateur astronomy.</span>
+    </p>
+
+    <p><b>November 22 - Observer's/Imaging Group Night at the Sleaford Observatory</b></p>
+
+    <h2 style="color: red;">December</h2>
+    <p><b>December 13 - Observer's/Imaging Group Night at the Sleaford Observatory</b><br>
+    Geminid Meteor Shower</p>
+
+    <hr>
+
+    <h1 style="color: red;">2044</h1>
+    <h2 style="color: red;">August</h2>
+
+    <p style="color: green;">
+      <b>August 17–22 or August 22–28 – Saskatchewan Summer Star Party 2044</b><br>
+      47th Annual SSSP at Cypress Hills Provincial Park. Stay tuned for program details.
+    </p>
+
+    <p style="color: green;">
+      <b>August 22 – Total Eclipse of the Sun</b> – Visible from the Saskatchewan Summer Star Party. SSSP'44 is on the Centre Line.
+    </p>
+
+    <hr>
+
+    <h3 style="color: green;">For More Information</h3>
+    <p style="color: green;">See our <a href="newsletters.html">Newsletter</a> or <a href="mailto:sk_centre@rasc.ca">email us</a>.</p>
+    <p style="color: green;">For SSSP information: <a href="mailto:sssp.sk@sasktel.net">sssp.sk@sasktel.net</a> or visit the <a href="https://sssp.saskatoon.rasc.ca/">Star Party homepage</a>.</p>
+    <p style="color: green;">To join the Saskatoon Centre, click <a href="http://www.rasc.ca/join/">here</a>.</p>
+
+    <hr>
+
+    <h3>Sleaford Observatory</h3>
+    <p>One of the benefits of membership is access to our
+    <a href="sleaford.html">Sleaford Observatory</a>. For information, contact
+    <a href="mailto:novachat@sasktel.net">Darrell Chatfield</a>.</p>
+
+    <hr>
+
+    <h3>Observing/Imaging Group</h3>
+    <p>The RASC Saskatoon Centre has an active Observing/Imaging Group.
+    Contact the <a href="mailto:spacerocksandstardust@gmail.com">Group Coordinator</a> for details.</p>
+
+    <hr>
+
+    <center>
+      <b style="color: blue;">Questions about astronomy, the Saskatoon Centre or membership?</b>
+      <p>Email: <a href="mailto:sk_centre@rasc.ca">sk_centre@rasc.ca</a></p>
+      <p>RASC Inc.<br>PO Box 31086, RPO Broadway<br>Saskatoon, SK S7H 5S8</p>
+    </center>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+
+</body>
+</html>
