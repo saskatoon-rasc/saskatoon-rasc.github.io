@@ -1,200 +1,223 @@
 <!DOCTYPE html>
-
-<HEAD>
-
-<TITLE> RASC Telescopes </TITLE>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</HEAD>
-
-<body bgcolor="000000">
-
-<script language="JavaScript"><!--
-
-browserName = navigator.appName;
-
-browserVer = parseInt ( navigator.appVersion );
-
-
-
-version = "n2";
-
-if ( browserName == "Netscape" && browserVer >= 3 ) version = "n3";
-
-if ( browserName == "Microsoft Internet Explorer" && browserVer >=4 ) version = "e4";
-
-
-
-if ( version == "n3" || version == "e4" )
-
-{
-
-		home_on = new Image ( 134, 38 );
-		home_on.src = "menuimages/lt_home_on.jpg";
-	    about_on = new Image ( 134, 38 );
-		about_on.src = "menuimages/lt_about_on.jpg";
-		executive_on = new Image ( 134, 38 );
-		executive_on.src = "menuimages/lt_executive_on.jpg";
-		activities_on = new Image ( 134, 38 );
-		activities_on.src = "menuimages/lt_activities_on.jpg";
-		newsletters_on = new Image ( 134, 38 );
-		newsletters_on.src = "menuimages/lt_newsletters_on.jpg";
-		clearsky_on = new Image ( 134, 38 );
-		clearsky_on.src = "menuimages/lt_clearsky_on.jpg";
-		link_on = new Image ( 134, 38 );
-		link_on.src = "menuimages/lt_link_on.jpg";
-		starparty_on = new Image ( 134, 38 );
-		starparty_on.src = "menuimages/lt_starparty_on.jpg";
-		telescopes_on = new Image ( 134, 38 );
-		telescopes_on.src = "menuimages/lt_telescopes_selected.jpg";
-
-		home_off = new Image ( 134, 38 );
-		home_off.src = "menuimages/lt_home_off.jpg";
-		about_off = new Image ( 134, 38 );
-		about_off.src = "menuimages/lt_about_off.jpg";
-		executive_off = new Image ( 134, 38 );
-		executive_off.src = "menuimages/lt_executive_off.jpg";
-		activities_off = new Image ( 134, 38 );
-		activities_off.src = "menuimages/lt_activities_off.jpg";
-		newsletters_off = new Image ( 134, 38 );
-		newsletters_off.src = "menuimages/lt_newsletters_off.jpg";
-		clearsky_off = new Image ( 134, 38 );
-		clearsky_off.src = "menuimages/lt_clearsky_off.jpg";
-		link_off = new Image ( 134, 38 );
-		link_off.src = "menuimages/lt_link_off.jpg";
-		starparty_off = new Image ( 134, 38 );
-		starparty_off.src = "menuimages/lt_starparty_off.jpg";
-		telescopes_off = new Image ( 134, 38 );
-		telescopes_off.src = "menuimages/lt_telescopes_selected.jpg";
-
-
-
-
-
-
-}
-
-
-
-function button_on ( imgName )
-
-{
-
-        if ( version == "n3" || version == "e4" )
-
-        {
-
-                butOn = eval ( imgName + "_on.src" );
-
-                document [imgName].src = butOn;
-
-        }
-
-}
-
-
-
-function button_off ( imgName )
-
-{
-
-        if ( version == "n3" || version == "e4" )
-
-        {
-
-                butOff = eval ( imgName + "_off.src" );
-
-                document [imgName].src = butOff;
-
-        }
-
-}
-
-// --></script>
-
-
-<table border=0 width=100% cellpadding=10 cellspacing=0 height=100%>
-<tr>
-<td width=134 valign=top>
-<table border=0 cellpadding=0 cellspacing=0 valign=top>
-<tr><td><a href="index.html"><img src="menuimages/lt_g3_1s2.jpg" border="0" width="134" height="125"></a></td></tr>
-<tr><td><a href="index.html"onmouseout="button_off('home'); return true" onmouseover="button_on('home'); return true"><img src="menuimages/lt_home_off.jpg" border="0" width="134" height="38" name="home"></a></td></tr>
-<tr><td><a href="about_rasc.html"onmouseout="button_off('about'); return true" onmouseover="button_on('about'); return true"><img src="menuimages/lt_about_off.jpg" border="0" width="134" height="38" name="about"></a></td></tr>
-<tr><td><a href="executive.html"onmouseout="button_off('executive'); return true" onmouseover="button_on('executive'); return true"><img src="menuimages/lt_executive_off.jpg" border="0" width="134" height="38" name="executive"></a></td></tr>
-<tr><td><a href="activities.html"onmouseout="button_off('activities'); return true" onmouseover="button_on('activities'); return true"><img src="menuimages/lt_activities_off.jpg" border="0" width="134" height="38" name="activities"></a></td></tr>
-<tr><td><a href="newsletters.html"onmouseout="button_off('newsletters'); return true" onmouseover="button_on('newsletters'); return true"><img src="menuimages/lt_newsletters_off.jpg" border="0" width="134" height="38" name="newsletters"></a></td></tr>
-<tr><td><a href="clearsky.html"onmouseout="button_off('clearsky'); return true" onmouseover="button_on('clearsky') ; return true"><img src="menuimages/lt_clearsky_off.jpg" border="0" width="134" height="38" name="clearsky"></a></td></tr>
-<tr><td><a href="link.html"onmouseout="button_off('link'); return true" onmouseover="button_on('link'); return true"><img src="menuimages/lt_link_off.jpg" border="0" width="134" height="38" name="link"></a></td></tr>
-<tr><td><a href="https://sssp.saskatoon.rasc.ca/"onmouseout="button_off('starparty'); return true" onmouseover="button_on('starparty'); return true" target="_blank"><img src="menuimages/lt_starparty_off.jpg" border="0" width="134" height="38" name="starparty"></a></td></tr>
-<tr><td><a href="telescopes.html"onmouseout="button_off('telescopes'); return true" onmouseover="button_on('telescopes'); return true"><img src="menuimages/lt_telescopes_selected.jpg" border="0" width="134" height="38" name="telescopes"></a></td>
-</table></td>
-
-<td valign=top bgcolor="FFFFFF"><font face="times">
-<table width=100%>
-<tr><td>
-<img src="images/centre_header2.jpg" width=600 border=0></td><td>
-<h2>Telescopes</h2>
-</td></tr>
-</table>
-
-<!-- NEW DATA GOES HERE *NOTE: CHANGE THE MENU GRPAHIC FOR THE CORRESPONDING PAGE GROUP TO THE "selected" VERSION INSTEAD OF "on" AND "off" VERSIONS IN THE JAVASCRIPT ABOVE -->
-
-<table border rules=all width=100% cellpadding=10>><tr valign=top><td>
-
-<img src="images/meade_lightbridge.gif" align=left hspace=10>
-
-<center>
-<h3>Telescope Rental Program</h3>
-</center>
-
-Saskatoon Centre has made its telescopes available for rent to RASC members on a monthly basis. We have three Sky-Watcher 8 inch Dobsonian telescopes, each with a kit of eyepieces and Antares 8x50 right angle finder scopes. Also we have one Telrad Reflex Sight.<p>
-<center><a href="rent.html">Rental Information</a></center>
-
-</td><td>
-
-<center><h3>Sleaford Roll-Off Observatory</h3></center>
-
-<i>Progress and preparation for Skynet, December 21, 2019.</i> Daryl Janzen writes: Here are a couple of videos [<a href="images/inside.mov">outside</a>, <a href="images/outside.mov">inside</a>] I just took from home of the Sleaford rolloff opening and closing. The PROMPT telescope pier will be where the black stool is sitting between the closest and next closest telescopes to the cameras. <p>
-
-Scott and I were out at Sleaford a couple of days this week getting all the control wiring done, and Kim and I went out again today to sort out some computer issues. I captured the videos on my phone just now through the Reolink app while running MaxDome through TeamViewer on my laptop. <p>
-
-I have a few odds and ends to finish setting up on the computer, and we're waiting for the telescope mount to arrive in ~February to finish off the pier and install the telescope, but this marks a significant milestone towards setting up the Skynet robotic telescope at Sleaford, and participating in multi-messenger astronomy at the U of S!<p>
-
-</td></tr></table>
-
-<!--<center>
-<h3>The Saskatoon Centre's (New) 16" Telescope</h3>
-</center>
-
-In September 2006, the Saskatoon Centre purchased a Classic Meade LX-200 16" telescope from the Toronto Centre. This telescope will temporarily be mounted in the University of Saskatchewan Roll-off building at the Sleaford Observatory until the RASC has the funds to build our own observatory, anticipated approximately two years from now. The telescope is expected to be mounted and functional in November 2006.<p>
-
-The agreement to use the U of S facility means that for some of the time, the U of S will have exclusive access to the telescope for astronomy labs, typically September through November on Monday, Tuesday, Wednesday between 7:30 pm and 10:00 pm. At other times, the scope will be available to RASC members who have been trained to use the roll-off building and the 16" scope. (Other scopes within the roll-off may also be available for use with training). The telescope will be located on the east-most of the 4 piers in the roll-off.<p>
-
-The photos of the scope were taken at the October 16 General Meeting of the Saskatoon Centre when we were given of tour as the telescope was being checked out in the Physics department basement. The telescope will be final mounted on a custom polar aligned pier fabricated by the U of S and paid for by the RASC under the Sleaford joint-use agreement. The telescope has go-to capability, and with such a large instrument, this is certainly an asset. The telescope has a hand-controller by which the scope can be slewed, but best control is achieved by controlling movement and positioning with a computer that will run Earth Centred Universe (ECU); the standard planetarium and control software used by the U of S.<p>
-
-An RASC training manual for the roll-off & telescopes is available <a href="TheSleafordObservatoryUsersManual.pdf">here</a>. 
-A copy of the Meade manual is available 
-<a href="Meade16LX200Classic_manual.pdf">here</a>. If you anticipate using the telescope in the future, please read the manual in advance of your training. Most of the training will be conducted by Richard Huziak. If there are other LX-200 users in our club that might want to assist in training, please contact Rick. We are currently figuring out all of the details about keys, training, manuals and operation, so please be patient, but remain excited!<p>
-
-<center>
-<img src="16scope1.gif"><p>
-</center>
-
-<center>
-<img src="16scope2.gif"><p>
-</center>
-
-<center>
-<img src="16scope3.gif"><p>
-</center>-->
-
-
-<!-- AND NEW DATA ENDS HERE --> 
-
-</font>
-</td>
-
-</table>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RASC Saskatoon Centre – Telescopes</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* NAVIGATION STYLES */
+    nav {
+      background-color: #000;
+      border-bottom: 2px solid #444;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    .menu-toggle span {
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 15px;
+      font-size: 18px;
+      border-top: 1px solid #333;
+    }
+
+    .nav-links a:hover {
+      background-color: #333;
+    }
+
+    .nav-links a.active {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    /* Desktop layout */
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        width: auto;
+      }
+
+      .nav-links a {
+        border: none;
+        margin: 0 10px;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    /* CONTENT STYLING */
+    .content {
+      background-color: #fff;
+      color: #000;
+      padding: 30px;
+      max-width: 900px;
+      margin: 30px auto;
+      box-sizing: border-box;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+                  0 0 40px rgba(0, 0, 0, 0.4);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      color: #000;
+      vertical-align: top;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: #0000ee;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 15px;
+        font-size: 16px;
+        margin: 15px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Responsive Navigation Menu -->
+  <nav>
+    <div class="nav-container">
+      <div class="menu-toggle" onclick="toggleMenu()">
+        ☰ <span>Menu</span>
+      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about_rasc.html">About</a>
+      <a href="executive.html">Executive</a>
+      <a href="activities.html">Activities</a>
+      <a href="newsletters.html">Newsletters</a>
+      <a href="clearsky.html">Clear Sky</a>
+      <a href="link.html">Links</a>
+      <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
+      <a href="telescopes.html" class="active">Telescopes</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="content">
+    <table>
+      <tr>
+        <td><img src="images/centre_header2.jpg" width="600" border="0" alt="RASC Header"></td>
+        <td><h2>Telescopes</h2></td>
+      </tr>
+    </table>
+
+    <table border rules="all" width="100%" cellpadding="10">
+      <tr valign="top">
+        <td>
+          <img src="images/meade_lightbridge.gif" align="left" hspace="10" alt="Meade Lightbridge Telescope">
+          <center><h3>Telescope Rental Program</h3></center>
+          <p>The Saskatoon Centre has made its telescopes available for rent to RASC members on a monthly basis. 
+          We have three Sky-Watcher 8-inch Dobsonian telescopes, each with a kit of eyepieces and Antares 8x50 right-angle finder scopes. 
+          We also have one Telrad Reflex Sight.</p>
+          <center><a href="rent.html">Rental Information</a></center>
+        </td>
+        <td>
+          <center><h3>Sleaford Roll-Off Observatory</h3></center>
+          <p><i>Progress and preparation for Skynet, December 21, 2019.</i></p>
+          <p>Daryl Janzen writes: Here are a couple of videos 
+          [<a href="images/inside.mov">outside</a>, <a href="images/outside.mov">inside</a>] 
+          I just took from home of the Sleaford roll-off opening and closing. The PROMPT telescope pier will be where the black stool is sitting 
+          between the closest and next closest telescopes to the cameras.</p>
+
+          <p>Scott and I were out at Sleaford a couple of days this week getting all the control wiring done, 
+          and Kim and I went out again today to sort out some computer issues. 
+          I captured the videos on my phone just now through the Reolink app while running MaxDome through TeamViewer on my laptop.</p>
+
+          <p>I have a few odds and ends to finish setting up on the computer, and we're waiting for the telescope mount 
+          to arrive in ~February to finish off the pier and install the telescope, 
+          but this marks a significant milestone towards setting up the Skynet robotic telescope at Sleaford, 
+          and participating in multi-messenger astronomy at the U of S!</p>
+        </td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <center>
+      <b style="color: blue;">Questions about astronomy, the Saskatoon Centre or membership?</b>
+      <p>Email: <a href="mailto:sk_centre@rasc.ca">sk_centre@rasc.ca</a></p>
+      <p>RASC Inc.<br>PO Box 31086, RPO Broadway<br>Saskatoon, SK S7H 5S8</p>
+    </center>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 
 </body>
 </html>
