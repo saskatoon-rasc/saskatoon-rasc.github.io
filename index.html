@@ -1,171 +1,223 @@
-<html>
-
-<HEAD>
-
-<TITLE> RASC - Saskatoon Centre </TITLE>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</HEAD>
-
-<body bgcolor="#000000">
-
-
-
-<script language="JavaScript"><!--
-
-browserName = navigator.appName;
-
-browserVer = parseInt ( navigator.appVersion );
-
-
-
-version = "n2";
-
-if ( browserName == "Netscape" && browserVer >= 3 ) version = "n3";
-
-if ( browserName == "Microsoft Internet Explorer" && browserVer >=4 ) version = "e4";
-
-
-
-if ( version == "n3" || version == "e4" )
-
-{
-
-
-
-        about_on = new Image ( 134, 94 );
-		about_on.src = "menuimages/about_on.jpg";
-		executive_on = new Image ( 72, 69 );
-		executive_on.src = "menuimages/executive_on.jpg";
-		activities_on = new Image ( 72, 69 );
-		activities_on.src = "menuimages/activities_on.jpg";
-		newsletters_on = new Image ( 134, 70 );
-		newsletters_on.src = "menuimages/newsletters_on.jpg";
-		clearsky_on = new Image ( 134, 94 );
-		clearsky_on.src = "menuimages/clearsky_on.jpg";
-		link_on = new Image ( 134, 94 );
-		link_on.src = "menuimages/link_on.jpg";
-		starparty_on = new Image ( 134, 94 );
-		starparty_on.src = "menuimages/starparty_on.jpg";
-		telescopes_on = new Image ( 134, 70);
-		telescopes_on.src = "menuimages/telescopes_on.jpg";
-
-		about_off = new Image ( 134, 94 );
-		about_off.src = "menuimages/about_off.jpg";
-		executive_off = new Image ( 134, 108 );
-		executive_off.src = "menuimages/executive_off.jpg";
-		activities_off = new Image ( 134, 108 );
-		activities_off.src = "menuimages/activities_off.jpg";
-		newsletters_off = new Image ( 134, 70 );
-		newsletters_off.src = "menuimages/newsletters_off.jpg";
-		clearsky_off = new Image ( 134, 94 );
-		clearsky_off.src = "menuimages/clearsky_off.jpg";
-		link_off = new Image ( 134, 108 );
-		link_off.src = "menuimages/link_off.jpg";
-		starparty_off = new Image ( 134, 108 );
-		starparty_off.src = "menuimages/starparty_off.jpg";
-		telescopes_off = new Image ( 134, 70 );
-		telescopes_off.src = "menuimages/telescopes_off.jpg";
-
-
-
-
-
-
-}
-
-
-
-function button_on ( imgName )
-
-{
-
-        if ( version == "n3" || version == "e4" )
-
-        {
-
-                butOn = eval ( imgName + "_on.src" );
-
-                document [imgName].src = butOn;
-
-        }
-
-}
-
-
-
-function button_off ( imgName )
-
-{
-
-        if ( version == "n3" || version == "e4" )
-
-        {
-
-                butOff = eval ( imgName + "_off.src" );
-
-                document [imgName].src = butOff;
-
-        }
-
-}
-
-// --></script>
-
-
-<TABLE BORDER=0 cellpadding=0 cellspacing=0 height=100% width=100%>
-
-
-<TR>
-
-
-
-<td align=center>
-
-<table border=0 cellpadding=0 cellspacing=0>
-<tr><td>&nbsp;</td></tr>
-<tr><td><a href="about_rasc.html"onmouseout="button_off('about'); return true" onmouseover="button_on('about'); return true"><img src="menuimages/about_off.jpg" border="0" width="134" height="94" name="about"></a></td></tr>
-
-<tr><td><a href="executive.html"onmouseout="button_off('executive'); return true" onmouseover="button_on('executive'); return true"><img src="menuimages/executive_off.jpg" border="0" width="134" height="108" name="executive"></a></td></tr>
-
-<tr><td><a href="activities.html"onmouseout="button_off('activities'); return true" onmouseover="button_on('activities'); return true"><img src="menuimages/activities_off.jpg" border="0" width="134" height="108" name="activities"></a></td></tr>
-
-<tr><td><a href="newsletters.html"onmouseout="button_off('newsletters'); return true" onmouseover="button_on('newsletters'); return true"><img src="menuimages/newsletters_off.jpg" border="0" width="134" height="70" name="newsletters"></a></td></tr></table>
-
-</td>
-
-<td align=center valign=middle><a href="about_rasc.html"><IMG SRC="images/home4.jpg" border="0" width="360" height="396"></a></td>
-
-<td align=center>
-
-<table border=0 cellpadding=0 cellspacing=0>
-
-<tr><td>&nbsp;</td></tr>
-<tr><td><a href="clearsky.html"onmouseout="button_off('clearsky'); return true" onmouseover="button_on('clearsky') ; return true"><img src="menuimages/clearsky_off.jpg" border="0" width="134" height="94" name="clearsky"></a></td></tr>
-
-
-<tr><td><a href="link.html"onmouseout="button_off('link'); return true" onmouseover="button_on('link'); return true"><img src="menuimages/link_off.jpg" border="0" width="134" height="108" name="link"></a></td></tr>
-
-<tr><td><a href="https://sssp.saskatoon.rasc.ca/"onmouseout="button_off('starparty'); return true" onmouseover="button_on('starparty'); return true" target="_blank"><img src="menuimages/starparty_off.jpg" border="0" width="134" height="108" name="starparty"></a></td></tr>
-
-<tr><td><a href="telescopes.html"onmouseout="button_off('telescopes'); return true" onmouseover="button_on('telescopes'); return true"><img src="menuimages/telescopes_off.jpg" border="0" width="134" height="70" name="telescopes"></a></td></tr></table>
-
-
-</td>
-
-
-</tr>
-
-
-
-<tr><td colspan=3 align=center valign=middle>
-<p><font face="arial,helvetica,sans-serif" size="1" color="#ffffff">Web site maintained by <a href="mailto:ttuomi@sasktel.net?subject=RASC Saskatoon Centre Web Site">Tenho Tuomi</a></font></p>
-<p><font face="arial,helvetica,sans-serif" size="1" color="#ffffff"><i>Hubble Telescope image of NGC 4414 courtesy of the Space Telescope Science Institute</i></font></p>
-</td></tr>
-</table>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RASC - Saskatoon Centre</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    header {
+      padding: 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    /* NAVIGATION STYLES (matches Executive page) */
+    nav {
+      background-color: #000;
+      border-bottom: 2px solid #444;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    /* optional logo area (kept commented out) */
+    .nav-logo img {
+      height: 60px;
+    }
+
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    .menu-toggle span {
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 15px;
+      font-size: 18px;
+      border-top: 1px solid #333;
+      display: block;
+    }
+
+    .nav-links a:hover {
+      background-color: #333;
+    }
+
+    /* Desktop layout (matches Executive) */
+    @media (min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: none;
+        width: auto;
+      }
+
+      .nav-links a {
+        border: none;
+        margin: 0 10px;
+      }
+
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    main {
+      padding: 1.5rem;
+    }
+
+    .main-image img {
+      max-width: 90vw;
+      height: auto;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: 2rem;
+      padding: 1rem;
+      border-top: 1px solid #333;
+    }
+
+    footer a {
+      color: #4da6ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .main-image img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>RASC - Saskatoon Centre</h1>
+  </header>
+
+  <!-- Navigation (exact structure & behaviour as Executive page) -->
+  <nav>
+    <div class="nav-container">
+      <!--<div class="nav-logo">
+        <a href="index.html"><img src="menuimages/lt_g3_1s2.jpg" alt="RASC Saskatoon Logo"></a>
+      </div>-->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        ☰ <span>Menu</span>
+      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about_rasc.html">About</a>
+      <a href="executive.html">Executive</a>
+      <a href="activities.html">Activities</a>
+      <a href="newsletters.html">Newsletters</a>
+      <a href="clearsky.html">Clear Sky</a>
+      <a href="link.html">Links</a>
+      <a href="https://sssp.saskatoon.rasc.ca/" target="_blank">Star Party</a>
+      <a href="telescopes.html">Telescopes</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="main-image">
+      <a href="about_rasc.html">
+        <img src="images/home4.jpg" alt="RASC Home">
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      Website maintained by
+      <a href="mailto:ttuomi@sasktel.net?subject=RASC Saskatoon Centre Web Site">Tenho Tuomi</a>
+    </p>
+    <p><i>Hubble Telescope image of NGC 4414 courtesy of the Space Telescope Science Institute</i></p>
+  </footer>
+
+  <script>
+    // toggle exactly as in Executive page:
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      // when mobile: navLinks is hidden by default (display !== 'flex')
+      navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    // Ensure correct initial state if user resizes after interaction:
+    window.addEventListener('resize', () => {
+      const navLinks = document.getElementById('navLinks');
+      if (window.innerWidth >= 768) {
+        navLinks.style.display = 'flex';
+      } else {
+        // don't override user's manual open/close if they used the toggle;
+        // but if it's the initial load, ensure it's hidden on small screens:
+        if (!navLinks.dataset.toggled) navLinks.style.display = 'none';
+      }
+    });
+
+    // Mark dataset.toggled when user clicks so resize handler doesn't clobber preference:
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.dataset.toggled = '1';
+    });
+
+    // set initial desktop state (in case loaded on wide screen)
+    if (window.innerWidth >= 768) {
+      document.getElementById('navLinks').style.display = 'flex';
+    }
+  </script>
 
 </body>
-
 </html>
